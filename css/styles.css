@@ -118,6 +118,37 @@ section h2 {
   font-size: 1.2rem;
   vertical-align: middle;
 }
+#skills {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.skills-icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.skills-icons div:hover {
+  transform: scale(1.15);
+  color: #007bff;
+}
+
+.skills-icons span {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
 
 /* الفوتر */
 footer {
