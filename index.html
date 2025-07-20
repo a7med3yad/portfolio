@@ -4,100 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ahmed Ayad | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f8f9fb;
-      color: #333;
-    }
-    header {
-      background: #1e1e2f;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: #ccc;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #1e1e2f;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .btn {
-      display: inline-block;
-      background: #1e1e2f;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 1rem;
-    }
-    .project-card {
-      background: white;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      margin-bottom: 2rem;
-    }
-    .project-card img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .project-card h3 {
-      margin-top: 0.5rem;
-    }
-    .skills-icons {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 1rem;
-    }
-    .skills-icons div {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-      text-align: center;
-    }
-    .skills-icons i {
-      font-size: 1.5rem;
-      color: #1e1e2f;
-    }
-    footer {
-      background: #1e1e2f;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
@@ -106,12 +13,13 @@
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <div class="container">
+
+    <!-- Updated About Section -->
     <section id="about">
       <h2>About Me</h2>
       <p>
@@ -130,6 +38,9 @@
       </p>
       <p>
         Clients I’ve worked with value clarity, consistency, and results — and that’s exactly what I aim to deliver.
+      </p>
+      <p>
+        Feel free to reach out if you have a project you'd like to discuss.
       </p>
       <a href="#contact" class="btn">Let's Talk</a>
     </section>
@@ -159,38 +70,39 @@
       </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-icons">
-        <div><i class="fab fa-python"></i><br><span>Python</span></div>
-        <div><i class="fab fa-java"></i><br><span>Java</span></div>
-        <div><i class="fas fa-code"></i><br><span>C++</span></div>
-        <div><i class="fab fa-html5"></i><br><span>HTML</span></div>
-        <div><i class="fab fa-css3-alt"></i><br><span>CSS</span></div>
-        <div><i class="fas fa-network-wired"></i><br><span>.NET</span></div>
-        <div><i class="fas fa-brain"></i><br><span>Machine Learning</span></div>
-        <div><i class="fas fa-robot"></i><br><span>AI</span></div>
-        <div><i class="fas fa-bolt"></i><br><span>Competitive Programming</span></div>
-        <div><i class="fas fa-project-diagram"></i><br><span>Neural Networks</span></div>
-        <div><i class="fas fa-cogs"></i><br><span>Sklearn</span></div>
-        <div><i class="fas fa-cloud-upload-alt"></i><br><span>Deployment</span></div>
-        <div><i class="fas fa-database"></i><br><span>SQL Server</span></div>
-        <div><i class="fas fa-database"></i><br><span>MySQL</span></div>
-        <div><i class="fas fa-server"></i><br><span>Backend</span></div>
-        <div><i class="fab fa-r-project"></i><br><span>R</span></div>
-      </div>
-    </section>
-
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
     </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-icons">
+        <div><i class="fab fa-python"></i><span>Python</span></div>
+        <div><i class="fab fa-java"></i><span>Java</span></div>
+        <div><i class="fas fa-code"></i><span>C++</span></div>
+        <div><i class="fab fa-html5"></i><span>HTML</span></div>
+        <div><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+        <div><i class="fas fa-network-wired"></i><span>.NET</span></div>
+        <div><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+        <div><i class="fas fa-robot"></i><span>AI</span></div>
+        <div><i class="fas fa-bolt"></i><span>Competitive Programming</span></div>
+        <div><i class="fas fa-project-diagram"></i><span>Neural Networks</span></div>
+        <div><i class="fas fa-cogs"></i><span>Sklearn</span></div>
+        <div><i class="fas fa-cloud-upload-alt"></i><span>Deployment</span></div>
+        <div><i class="fas fa-database"></i><span>SQL Server</span></div>
+        <div><i class="fas fa-database"></i><span>MySQL</span></div>
+        <div><i class="fas fa-server"></i><span>Backend</span></div>
+        <div><i class="fab fa-r-project"></i><span>R</span></div>
+      </div>
+    </section>
+
   </div>
 
   <footer>
     &copy; 2025 Ahmed Ayad. All rights reserved.
   </footer>
 </body>
-</html>
+</html>بقولك خلي شكلها حلو مش عاجبني 
