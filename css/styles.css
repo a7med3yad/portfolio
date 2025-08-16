@@ -1,9 +1,9 @@
 :root {
-  --service-img-1: url('images/data-insights.png');
-  --service-img-2: url('images/build-models.png');
-  --service-img-3: url('images/deploy-projects.png');
-  --service-img-4: url('images/ai-automation.png');
-  --service-img-5: url('images/backend-api.png');
+  --service-img-1: url('../images/data-insights.png');
+  --service-img-2: url('../images/build-models.png');
+  --service-img-3: url('../images/deploy-projects.png');
+  --service-img-4: url('../images/ai-automation.png');
+  --service-img-5: url('../images/backend-api.png');
 }
 
 /* ========== Reset ========== */
