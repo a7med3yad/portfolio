@@ -1,251 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ahmed Ayad | Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* خلفية النجوم */
-    #stars-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -1; /* يخلي النجوم ورا كل العناصر */
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    }
-
-    #stars, #stars2, #stars3 {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      background: transparent;
-      box-shadow: 
-        1000px 2000px #fff,
-        500px 1500px #fff,
-        200px 1200px #fff,
-        800px 900px #fff,
-        1300px 700px #fff;
-      animation: animStar 50s linear infinite;
-    }
-
-    #stars:after, #stars2:after, #stars3:after {
-      content: " ";
-      position: absolute;
-      top: 2000px;
-      width: 1px;
-      height: 1px;
-      background: transparent;
-      box-shadow: 
-        1000px 2000px #fff,
-        500px 1500px #fff,
-        200px 1200px #fff,
-        800px 900px #fff,
-        1300px 700px #fff;
-    }
-
-    #stars2 {
-      box-shadow:
-        1500px 2300px #fff,
-        1200px 1800px #fff,
-        600px 1400px #fff,
-        400px 1100px #fff;
-      animation: animStar 100s linear infinite;
-    }
-
-    #stars3 {
-      box-shadow:
-        700px 2100px #fff,
-        300px 1700px #fff,
-        1100px 1300px #fff;
-      animation: animStar 150s linear infinite;
-    }
-
-    @keyframes animStar {
-      from { transform: translateY(0px); }
-      to { transform: translateY(-2000px); }
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      color: #fff;
-      background: transparent;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ahmed Ayad</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- خلفية النجوم -->
-  <div id="stars-container">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-  </div>
+    <!-- الخلفية النجوم -->
+    <div id="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
 
-  <header>
-    <h1>Ahmed Ayad</h1>
-    <p>Data Scientist | .NET Developer | AI & ML Enthusiast | Competitive Programmer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <!-- الهيدر -->
+    <header>
+        <h1>Ahmed Ayad</h1>
+        <p>Data Scientist | .NET Developer | AI & ML Enthusiast | Competitive Programmer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="container">
+    <!-- المحتوى -->
+    <main>
+        <!-- About -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I turn messy, complex datasets into clear, actionable insights that drive real results.</p>
+            <p>I’m Ahmed, a Data Scientist with hands-on experience in classification, regression, clustering, and pattern recognition, delivering competitive advantage for both startups and enterprise teams.</p>
+        </section>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I turn messy, complex datasets into clear, actionable insights that drive real results.
-      </p>
-      <p>
-        My work is all about making data work for you — cleaning it, organizing it, and building predictive models that don’t just look good on paper, but deliver in the real world.
-      </p>
-      <p>
-        I’m Ahmed, a Data Scientist with hands-on experience in classification, regression, clustering, and pattern recognition. I’ve helped uncover patterns, predict outcomes, and transform raw data into a competitive advantage for both startups and enterprise teams.
-      </p>
-      <p>
-        Give me the data, and I’ll find the story it’s trying to tell — the one that can spark smarter decisions, unlock opportunities, and take your project or business to the next level.
-      </p>
-      <a href="#contact" class="btn">Let's Talk</a>
-    </section>
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="card">
+                <h3>Bachelor of Computer Science</h3>
+                <p><strong>University:</strong> XYZ University</p>
+                <p><strong>Year:</strong> 2020 - 2024</p>
+            </div>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education-container">
+        <!-- Services -->
+        <section id="services">
+            <h2>Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>Data Analysis</h3>
+                    <p>Turning raw data into insights that drive decisions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Machine Learning</h3>
+                    <p>Building predictive models using modern AI techniques.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and dynamic websites with .NET.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="education-card">
-          <i class="fas fa-university"></i>
-          <h3>Bachelor's in Computer Science</h3>
-          <p><strong>University:</strong> [Your University Name]</p>
-          <p><strong>Duration:</strong> 2020 - 2024</p>
-          <p>Specialized in Artificial Intelligence, Machine Learning, and Data Science with a strong foundation in programming and algorithms.</p>
-        </div>
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>Predicting churn using ML models with 90% accuracy.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Recommendation System</h3>
+                    <p>AI-powered recommendation engine for e-commerce.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="education-card">
-          <i class="fas fa-graduation-cap"></i>
-          <h3>Online Certifications</h3>
-          <ul>
-            <li>Machine Learning - Coursera (Andrew Ng)</li>
-            <li>Deep Learning Specialization - Coursera</li>
-            <li>Data Analysis with Python - Kaggle</li>
-          </ul>
-        </div>
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>.NET Core</li>
+                <li>Machine Learning</li>
+                <li>SQL</li>
+                <li>Power BI</li>
+                <li>Deep Learning</li>
+            </ul>
+        </section>
 
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Services</h2>
-      <div class="services-container">
-
-        <div class="service-card">
-          <i class="fas fa-database"></i>
-          <h3>Data Analysis & Visualization</h3>
-          <p>I transform raw data into clear insights using Python, Pandas, and visualization tools like Matplotlib & Power BI.</p>
-        </div>
-
-        <div class="service-card">
-          <i class="fas fa-brain"></i>
-          <h3>Machine Learning Solutions</h3>
-          <p>Building predictive models for classification, regression, and clustering to deliver real-world business value.</p>
-        </div>
-
-        <div class="service-card">
-          <i class="fas fa-network-wired"></i>
-          <h3>.NET & Backend Development</h3>
-          <p>Developing robust and scalable backend systems using .NET, C#, and SQL Server for high-performance applications.</p>
-        </div>
-
-        <div class="service-card">
-          <i class="fas fa-project-diagram"></i>
-          <h3>AI & Automation</h3>
-          <p>Creating AI-driven applications and automating workflows to improve efficiency and decision-making.</p>
-        </div>
-
-        <div class="service-card">
-          <i class="fas fa-code"></i>
-          <h3>Competitive Programming Training</h3>
-          <p>Helping programmers improve problem-solving skills with structured CP training and algorithms practice.</p>
-        </div>
-
-      </div>
-      <a href="#contact" class="btn cta-btn">Need help with your project? Let's collaborate!</a>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="project-card">
-        <img src="images/breast-cancer.png" alt="Breast Cancer Analysis App" />
-        <h3>Breast Cancer Analysis App</h3>
-        <p>An interactive application analyzing breast cancer data using machine learning techniques, built with Streamlit for easy user interaction.</p>
-        <a href="project1.html">Read More</a>
-      </div>
-
-      <div class="project-card">
-        <img src="images/hotel-management-rfm.png" alt="Hotel Management RFM Analysis" />
-        <h3>Hotel Management RFM Analysis</h3>
-        <p>This project focuses on analyzing hotel customer data using RFM (Recency, Frequency, Monetary) analysis to identify valuable customer segments and improve marketing strategies.</p>
-        <a href="project2.html">Read More</a>
-      </div>
-
-      <div class="project-card">
-        <img src="images/auto-sales.png" alt="Auto Sales Analysis" />
-        <h3>Auto Sales Analysis</h3>
-        <p>Data-driven analysis of car sales trends to understand customer behavior and sales patterns with effective visualization.</p>
-        <a href="project3.html">Read More</a>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-icons">
-        <div><i class="fab fa-python"></i><span>Python</span></div>
-        <div><i class="fab fa-java"></i><span>Java</span></div>
-        <div><i class="fas fa-code"></i><span>C++</span></div>
-        <div><i class="fab fa-html5"></i><span>HTML</span></div>
-        <div><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-        <div><i class="fas fa-network-wired"></i><span>.NET</span></div>
-        <div><i class="fas fa-brain"></i><span>Machine Learning</span></div>
-        <div><i class="fas fa-robot"></i><span>AI</span></div>
-        <div><i class="fas fa-bolt"></i><span>Competitive Programming</span></div>
-        <div><i class="fas fa-project-diagram"></i><span>Neural Networks</span></div>
-        <div><i class="fas fa-cogs"></i><span>Sklearn</span></div>
-        <div><i class="fas fa-cloud-upload-alt"></i><span>Deployment</span></div>
-        <div><i class="fas fa-database"></i><span>SQL Server</span></div>
-        <div><i class="fas fa-database"></i><span>MySQL</span></div>
-        <div><i class="fas fa-server"></i><span>Backend</span></div>
-        <div><i class="fab fa-r-project"></i><span>R</span></div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
-    </section>
-
-  </div>
-
-  <footer>
-    &copy; 2025 Ahmed Ayad. All rights reserved.
-  </footer>
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Ready to work together? Let’s connect!</p>
+            <a href="mailto:your-email@example.com">Let's Talk</a>
+        </section>
+    </main>
 </body>
 </html>
