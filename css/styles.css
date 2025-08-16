@@ -78,7 +78,7 @@ section h2 {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent; /* شيل الخلفية */
   border-radius: 15px;
   padding: 20px;
   width: 260px;
@@ -113,6 +113,12 @@ section h2 {
 .service-card p {
   font-size: 0.9rem; /* أصغر كمان */
   color: #fff;
+}
+
+/* خصيصاً لبطاقة Deploy Projects */
+.service-card:nth-child(3) h3,
+.service-card:nth-child(3) p {
+  color: #000; /* خلي النص بالأسود */
 }
 
 .service-card:hover {
