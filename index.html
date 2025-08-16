@@ -7,8 +7,86 @@
   <link rel="stylesheet" href="css/styles.css" />
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* خلفية النجوم */
+    #stars-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* يخلي النجوم ورا كل العناصر */
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    }
+
+    #stars, #stars2, #stars3 {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: 
+        1000px 2000px #fff,
+        500px 1500px #fff,
+        200px 1200px #fff,
+        800px 900px #fff,
+        1300px 700px #fff;
+      animation: animStar 50s linear infinite;
+    }
+
+    #stars:after, #stars2:after, #stars3:after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: 
+        1000px 2000px #fff,
+        500px 1500px #fff,
+        200px 1200px #fff,
+        800px 900px #fff,
+        1300px 700px #fff;
+    }
+
+    #stars2 {
+      box-shadow:
+        1500px 2300px #fff,
+        1200px 1800px #fff,
+        600px 1400px #fff,
+        400px 1100px #fff;
+      animation: animStar 100s linear infinite;
+    }
+
+    #stars3 {
+      box-shadow:
+        700px 2100px #fff,
+        300px 1700px #fff,
+        1100px 1300px #fff;
+      animation: animStar 150s linear infinite;
+    }
+
+    @keyframes animStar {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-2000px); }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: transparent;
+    }
+  </style>
 </head>
 <body>
+  <!-- خلفية النجوم -->
+  <div id="stars-container">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </div>
+
   <header>
     <h1>Ahmed Ayad</h1>
     <p>Data Scientist | .NET Developer | AI & ML Enthusiast | Competitive Programmer</p>
