@@ -1,107 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ahmed Ayad</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <title>Ahmed Ayad | Data Scientist Portfolio</title>
 </head>
 <body>
-    <!-- الخلفية النجوم -->
-    <div id="stars-container">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-    </div>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Ahmed Ayad</a>
 
-    <!-- الهيدر -->
-    <header>
-        <h1>Ahmed Ayad</h1>
-        <p>Data Scientist | .NET Developer | AI & ML Enthusiast | Competitive Programmer</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active-link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#education" class="nav__link">Education</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <!-- المحتوى -->
-    <main>
-        <!-- About -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I turn messy, complex datasets into clear, actionable insights that drive real results.</p>
-            <p>I’m Ahmed, a Data Scientist with hands-on experience in classification, regression, clustering, and pattern recognition, delivering competitive advantage for both startups and enterprise teams.</p>
-        </section>
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+      <div class="home__container container">
+        <h1 class="home__title">Hi, I'm <span>Ahmed Ayad</span></h1>
+        <h3 class="home__subtitle">Data Scientist | AI & ML Enthusiast | .NET Developer</h3>
+        <p class="home__description">
+          I turn messy datasets into actionable insights that power smarter decisions.
+        </p>
+        <a href="#contact" class="button">Let's Talk</a>
+      </div>
+    </section>
 
-        <!-- Education -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="card">
-                <h3>Bachelor of Computer Science</h3>
-                <p><strong>University:</strong> XYZ University</p>
-                <p><strong>Year:</strong> 2020 - 2024</p>
-            </div>
-        </section>
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+      <h2 class="section__title">About Me</h2>
+      <p>
+        I'm a Data Scientist passionate about AI, Machine Learning, and solving complex problems with data.
+        Experienced in classification, regression, clustering, and predictive modeling.
+      </p>
+    </section>
 
-        <!-- Services -->
-        <section id="services">
-            <h2>Services</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <h3>Data Analysis</h3>
-                    <p>Turning raw data into insights that drive decisions.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Machine Learning</h3>
-                    <p>Building predictive models using modern AI techniques.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Web Development</h3>
-                    <p>Creating responsive and dynamic websites with .NET.</p>
-                </div>
-            </div>
-        </section>
+    <!--==================== EDUCATION ====================-->
+    <section class="education section" id="education">
+      <h2 class="section__title">Education</h2>
+      <ul>
+        <li>Bachelor's in Computer Science - [Your University] (Year)</li>
+        <li>Specialization in Data Science & AI</li>
+      </ul>
+    </section>
 
-        <!-- Projects -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <h3>Customer Churn Prediction</h3>
-                    <p>Predicting churn using ML models with 90% accuracy.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Recommendation System</h3>
-                    <p>AI-powered recommendation engine for e-commerce.</p>
-                </div>
-            </div>
-        </section>
+    <!--==================== SERVICES ====================-->
+    <section class="services section" id="services">
+      <h2 class="section__title">Services</h2>
+      <div class="services__grid">
+        <div class="service__card">
+          <i class="ri-database-2-line"></i>
+          <h3>Data Analysis</h3>
+          <p>Turning raw data into meaningful insights using modern tools.</p>
+        </div>
+        <div class="service__card">
+          <i class="ri-robot-line"></i>
+          <h3>Machine Learning Models</h3>
+          <p>Building and deploying predictive models for real-world applications.</p>
+        </div>
+        <div class="service__card">
+          <i class="ri-code-line"></i>
+          <h3>.NET Development</h3>
+          <p>Creating robust and scalable applications using .NET technologies.</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Skills -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Python</li>
-                <li>.NET Core</li>
-                <li>Machine Learning</li>
-                <li>SQL</li>
-                <li>Power BI</li>
-                <li>Deep Learning</li>
-            </ul>
-        </section>
+    <!--==================== PROJECTS ====================-->
+    <section class="projects section" id="projects">
+      <h2 class="section__title">Projects</h2>
+      <ul>
+        <li>Predictive Model for Customer Churn</li>
+        <li>Data Visualization Dashboard with Python</li>
+        <li>AI-based Sentiment Analysis System</li>
+      </ul>
+    </section>
 
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Ready to work together? Let’s connect!</p>
-            <a href="mailto:your-email@example.com">Let's Talk</a>
-        </section>
-    </main>
+    <!--==================== SKILLS ====================-->
+    <section class="skills section" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <p>Python, R, SQL, Machine Learning, Deep Learning, .NET, Power BI, Tableau</p>
+    </section>
+
+    <!--==================== CONTACT ====================-->
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Contact Me</h2>
+      <p>Email: <a href="mailto:ahmed@example.com">ahmed@example.com</a></p>
+      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/ahmedayad</a></p>
+      <p>GitHub: <a href="#" target="_blank">github.com/ahmedayad</a></p>
+    </section>
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <p>© 2025 Ahmed Ayad. All rights reserved.</p>
+  </footer>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
