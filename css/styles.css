@@ -56,16 +56,11 @@ section h2 {
   margin-bottom: 1.5rem;
 }
 
-/* Services Section */
+/* ========== Services Section ========== */
 #services {
   text-align: center;
   padding: 60px 20px;
-  background: #f4f4f4;
-}
-
-#services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  background: rgba(255,255,255,0.05);
 }
 
 .services-container {
@@ -76,38 +71,38 @@ section h2 {
 }
 
 .service-card {
-  background: #fff;
+  background: rgba(255,255,255,0.1);
   border-radius: 15px;
   padding: 20px;
-  width: 250px;
+  width: 220px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .service-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
 .service-card p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 0.9rem;
+  color: #eee;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* ========== Projects ========== */
+/* ========== Projects Section ========== */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +112,7 @@ section h2 {
 
 .project-card {
   background-color: rgba(255, 255, 255, 0.1);
-  width: 300px;
+  width: 280px;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
@@ -127,44 +122,55 @@ section h2 {
 
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .project-card h3 {
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .project-card p {
   margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
-/* ========== Skills ========== */
+/* ========== Skills Section ========== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 20px;
   justify-items: center;
   align-items: center;
   padding: 1rem 0;
-  font-size: 4rem; /* كبر حجم الأيقونات */
+  font-size: 3.5rem; /* حجم أيقونات مناسب */
+}
+
+/* ========== Contact Section ========== */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 #contact p {
-  margin: 0.5rem 0;
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #contact i {
-  margin-right: 8px;
-  color: #ffcc00; /* ممكن تغير اللون حسب ذوقك */
+  color: #ffcc00;
+  font-size: 1.3rem;
 }
-
 
 /* ========== Footer ========== */
 footer {
@@ -180,6 +186,6 @@ footer {
   }
 
   .skills-grid {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
