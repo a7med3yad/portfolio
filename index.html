@@ -1,77 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!--=============== FAVICON ===============-->
-   <link rel="shortcut icon" href="assets/img/myfavicon.png" type="image/x-icon">
-
-   <!--=============== REMIXICONS ===============-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-
-   <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="assets/css/styles.css">
-
-   <title>Ahmed Ibrahim - My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmed Ayad | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-   <!--==================== HEADER ====================-->
-   <header class="header" id="header">
-      <nav>
-         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
-      </nav>
-   </header>
+  <header>
+    <h1>Ahmed Ayad</h1>
+    <p>Data Scientist | .NET Developer | AI & ML Enthusiast | Competitive Programmer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-   <!--==================== MAIN ====================-->
-   <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home section" id="home">
-         <h1>Hi, I'm Ahmed Ibrahim</h1>
-         <p>I'm a Backend Developer, AI & Data Science Enthusiast.</p>
-      </section>
+  <div class="container">
 
-      <!--==================== ABOUT ====================-->
-      <section class="about section" id="about">
-         <h2>About Me</h2>
-         <p>I turn messy datasets into actionable insights and build AI projects that deliver results.</p>
-      </section>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I turn messy, complex datasets into clear, actionable insights that drive real results.
+      </p>
+      <p>
+        My work is all about making data work for you — cleaning it, organizing it, and building predictive models that don’t just look good on paper, but deliver in the real world.
+      </p>
+      <p>
+        I’m Ahmed, a Data Scientist with hands-on experience in classification, regression, clustering, and pattern recognition. I’ve helped uncover patterns, predict outcomes, and transform raw data into a competitive advantage for both startups and enterprise teams.
+      </p>
+      <p>
+        Give me the data, and I’ll find the story it’s trying to tell — the one that can spark smarter decisions, unlock opportunities, and take your project or business to the next level.
+      </p>
+      <a href="#contact" class="btn">Let's Talk</a>
+    </section>
 
-      <!--==================== SERVICES ====================-->
-      <section class="services section" id="services">
-         <h2>Services</h2>
-         <ul>
-            <li>Backend Development</li>
-            <li>Data Science & AI</li>
-            <li>Portfolio Website Design</li>
-         </ul>
-      </section>
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Services</h2>
+      <div class="services-container">
 
-      <!--==================== PROJECTS ====================-->
-      <section class="projects section" id="projects">
-         <h2>Projects</h2>
-         <p>Check out my GitHub for my latest projects.</p>
-      </section>
+        <div class="service-card">
+          <i class="fas fa-database"></i>
+          <h3>Data Analysis & Visualization</h3>
+          <p>I transform raw data into clear insights using Python, Pandas, and visualization tools like Matplotlib & Power BI.</p>
+        </div>
 
-      <!--==================== CONTACT ====================-->
-      <section class="contact section" id="contact">
-         <h2>Contact Me</h2>
-         <p>Email: ahmed@example.com</p>
-      </section>
-   </main>
+        <div class="service-card">
+          <i class="fas fa-brain"></i>
+          <h3>Machine Learning Solutions</h3>
+          <p>Building predictive models for classification, regression, and clustering to deliver real-world business value.</p>
+        </div>
 
-   <!--==================== FOOTER ====================-->
-   <footer class="footer">
-      <p>&copy; 2025 Ahmed Ibrahim. All rights reserved.</p>
-   </footer>
+        <div class="service-card">
+          <i class="fas fa-network-wired"></i>
+          <h3>.NET & Backend Development</h3>
+          <p>Developing robust and scalable backend systems using .NET, C#, and SQL Server for high-performance applications.</p>
+        </div>
 
-   <!--=============== MAIN JS ===============-->
-   <script src="assets/js/main.js"></script>
+        <div class="service-card">
+          <i class="fas fa-project-diagram"></i>
+          <h3>AI & Automation</h3>
+          <p>Creating AI-driven applications and automating workflows to improve efficiency and decision-making.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Competitive Programming Training</h3>
+          <p>Helping programmers improve problem-solving skills with structured CP training and algorithms practice.</p>
+        </div>
+
+      </div>
+      <a href="#contact" class="btn cta-btn">Need help with your project? Let's collaborate!</a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <img src="images/breast-cancer.png" alt="Breast Cancer Analysis App" />
+        <h3>Breast Cancer Analysis App</h3>
+        <p>An interactive application analyzing breast cancer data using machine learning techniques, built with Streamlit for easy user interaction.</p>
+        <a href="project1.html">Read More</a>
+      </div>
+
+      <div class="project-card">
+        <img src="images/hotel-management-rfm.png" alt="Hotel Management RFM Analysis" />
+        <h3>Hotel Management RFM Analysis</h3>
+        <p>This project focuses on analyzing hotel customer data using RFM (Recency, Frequency, Monetary) analysis to identify valuable customer segments and improve marketing strategies.</p>
+        <a href="project2.html">Read More</a>
+      </div>
+
+      <div class="project-card">
+        <img src="images/auto-sales.png" alt="Auto Sales Analysis" />
+        <h3>Auto Sales Analysis</h3>
+        <p>Data-driven analysis of car sales trends to understand customer behavior and sales patterns with effective visualization.</p>
+        <a href="project3.html">Read More</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-icons">
+        <div><i class="fab fa-python"></i><span>Python</span></div>
+        <div><i class="fab fa-java"></i><span>Java</span></div>
+        <div><i class="fas fa-code"></i><span>C++</span></div>
+        <div><i class="fab fa-html5"></i><span>HTML</span></div>
+        <div><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+        <div><i class="fas fa-network-wired"></i><span>.NET</span></div>
+        <div><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+        <div><i class="fas fa-robot"></i><span>AI</span></div>
+        <div><i class="fas fa-bolt"></i><span>Competitive Programming</span></div>
+        <div><i class="fas fa-project-diagram"></i><span>Neural Networks</span></div>
+        <div><i class="fas fa-cogs"></i><span>Sklearn</span></div>
+        <div><i class="fas fa-cloud-upload-alt"></i><span>Deployment</span></div>
+        <div><i class="fas fa-database"></i><span>SQL Server</span></div>
+        <div><i class="fas fa-database"></i><span>MySQL</span></div>
+        <div><i class="fas fa-server"></i><span>Backend</span></div>
+        <div><i class="fab fa-r-project"></i><span>R</span></div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Ahmed Ayad. All rights reserved.
+  </footer>
 </body>
 </html>
