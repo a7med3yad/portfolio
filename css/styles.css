@@ -1,3 +1,7 @@
+/* ============================= */
+/* ====== CSS الأساسي لديك ====== */
+/* ============================= */
+
 /* أساس الصفحة */
 body {
   background-color: #000000;
@@ -177,4 +181,81 @@ footer {
   color: #7da672;
   font-size: 0.95rem;
   border-top: 1px solid #6b8e23;
+}
+
+/* ============================= */
+/* ======= الإضافات الجديدة ======= */
+/* ============================= */
+
+/* قسم الخدمات */
+#services {
+  padding: 40px 20px;
+  background: #111d11;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(107, 142, 35, 0.3);
+  margin-bottom: 40px;
+}
+
+#services h2 {
+  font-size: 2rem;
+  color: #6b8e23;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #6b8e23;
+  padding-bottom: 5px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.service-card {
+  background: #1a261a;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 8px rgba(107, 142, 35, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 14px rgba(107, 142, 35, 0.5);
+}
+
+.service-card i {
+  font-size: 40px;
+  color: #6b8e23;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  color: #d8e6c3;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #cdecb2;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* زر CTA */
+.cta-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #6b8e23;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #4a5e1f;
 }
