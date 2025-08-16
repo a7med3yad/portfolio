@@ -9,12 +9,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- DevIcons -->
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Ahmed Ayad</h1>
     <p>Data Scientist | .NET Developer | AI & ML Enthusiast | Competitive Programmer</p>
@@ -28,7 +29,6 @@
   </header>
 
   <div class="container">
-
     <!-- About Section -->
     <section id="about">
       <h2>About Me</h2>
@@ -40,26 +40,42 @@
       </p>
     </section>
 
-  <section class="services__container">
-  <div class="service__card">
-    <div class="service__img" style="background-image: var(--service-img-1);"></div>
-    <h3 class="service__title">Data Insights</h3>
-    <p class="service__description">Analyze and extract valuable insights from your data.</p>
-  </div>
-
-  <div class="service__card">
-    <div class="service__img" style="background-image: var(--service-img-2);"></div>
-    <h3 class="service__title">Build Models</h3>
-    <p class="service__description">Create machine learning models tailored to your needs.</p>
-  </div>
-
-  <div class="service__card">
-    <div class="service__img" style="background-image: var(--service-img-3);"></div>
-    <h3 class="service__title">Deploy Projects</h3>
-    <p class="service__description">Deploy projects seamlessly to production environments.</p>
-  </div>
-</section>
-
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Services</h2>
+      <div class="services-container">
+        <div class="service-card" style="background-image: var(--service-img-1);">
+          <div class="overlay">
+            <h3>Get Insights</h3>
+            <p>Analyze raw data and extract actionable insights to drive smarter decisions.</p>
+          </div>
+        </div>
+        <div class="service-card" style="background-image: var(--service-img-2);">
+          <div class="overlay">
+            <h3>Build Models</h3>
+            <p>Create predictive and classification models using Machine Learning techniques.</p>
+          </div>
+        </div>
+        <div class="service-card" style="background-image: var(--service-img-3);">
+          <div class="overlay">
+            <h3>Deploy Projects</h3>
+            <p>Deploy applications and ML models efficiently using cloud services and servers.</p>
+          </div>
+        </div>
+        <div class="service-card" style="background-image: var(--service-img-4);">
+          <div class="overlay">
+            <h3>AI Automation</h3>
+            <p>Automate workflows with AI-powered tools for faster and smarter operations.</p>
+          </div>
+        </div>
+        <div class="service-card" style="background-image: var(--service-img-5);">
+          <div class="overlay">
+            <h3>Backend & APIs</h3>
+            <p>Design APIs and backend systems to power websites and applications efficiently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects">
@@ -71,14 +87,12 @@
           <p>Interactive app analyzing breast cancer data using ML techniques.</p>
           <a href="project1.html">Read More</a>
         </div>
-
         <div class="project-card">
           <img src="images/hotel-management-rfm.png" alt="Hotel Management RFM Analysis" />
           <h3>Hotel Management RFM Analysis</h3>
           <p>Analyze hotel customer data using RFM to improve marketing strategies.</p>
           <a href="project2.html">Read More</a>
         </div>
-
         <div class="project-card">
           <img src="images/auto-sales.png" alt="Auto Sales Analysis" />
           <h3>Auto Sales Analysis</h3>
@@ -115,24 +129,12 @@
     <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a>
-      </p>
-      <p>
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a>
-      </p>
-      <p>
-        <i class="fab fa-linkedin"></i>
-        <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a>
-      </p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
     </section>
-
   </div>
 
-  <footer>
-    &copy; 2025 Ahmed Ayad. All rights reserved.
-  </footer>
+  <footer>&copy; 2025 Ahmed Ayad. All rights reserved.</footer>
 </body>
 </html>
