@@ -125,10 +125,16 @@ section h2 {
   font-size: 4rem; /* كبر حجم الأيقونات */
 }
 
-/* ========== Contact ========== */
 #contact p {
   margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
+
+#contact i {
+  margin-right: 8px;
+  color: #ffcc00; /* ممكن تغير اللون حسب ذوقك */
+}
+
 
 /* ========== Footer ========== */
 footer {
