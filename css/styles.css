@@ -100,21 +100,25 @@ header nav a:hover { color: var(--first-color); }
   font-weight: 600;
 }
 
-/* Skills */
-.skills-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-.skills-icons div {
-  display: flex;
-  flex-direction: column;
+
+.skills-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 20px;
+  justify-items: center;
   align-items: center;
-  width: 100px;
+  margin-top: 1.5rem;
 }
-.skills-icons i { margin-bottom: 0.5rem; color: var(--first-color); }
+
+.skills-icons-grid i {
+  font-size: 50px;
+  transition: transform 0.3s;
+}
+
+.skills-icons-grid i:hover {
+  transform: scale(1.2);
+}
+
 
 /* Contact */
 #contact p { text-align: center; margin-bottom: 0.5rem; }
