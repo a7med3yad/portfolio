@@ -64,79 +64,60 @@ section h2 {
   margin-bottom: 1.5rem;
 }
 
-/*================= ROOT VARIABLES =================*/
-:root {
-  --service-img-1: url('../images/data-insights.png');
-  --service-img-2: url('../images/build-models.png');
-  --service-img-3: url('../images/deploy-projects.png');
-  --service-img-4: url('../images/ai-automation.png');
-  --service-img-5: url('../images/backend-api.png');
-
-  --text-color: #333;
-  --text-size: 14px;
-  --title-size: 16px;
+/* ========== Services Section ========== */
+#services {
+  padding: 60px 20px;
+  background: rgba(0,0,0,0.4);
 }
 
-/*================= SERVICES SECTION =================*/
-.services__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
-.service__card {
+.services-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px;
   text-align: center;
-  padding: 1rem;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service__card:hover {
-  transform: translateY(-8px);
-}
-
-/*================= SERVICE IMAGE =================*/
-.service__img {
-  width: 120px;      /* حجم الصورة أكبر */
+.service-card::before {
+  content: "";
+  display: block;
+  width: 120px; /* أكبر من الأول */
   height: 120px;
+  margin: 0 auto 15px auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 0.8rem;
 }
 
-/*================= SERVICE TEXT =================*/
-.service__title {
-  font-size: var(--title-size);
-  font-weight: 600;
-  color: var(--text-color);
-  margin-bottom: 0.3rem;
+.service-card:nth-child(1)::before { background-image: var(--service-img-1); }
+.service-card:nth-child(2)::before { background-image: var(--service-img-2); }
+.service-card:nth-child(3)::before { background-image: var(--service-img-3); }
+.service-card:nth-child(4)::before { background-image: var(--service-img-4); }
+.service-card:nth-child(5)::before { background-image: var(--service-img-5); }
+
+.service-card h3 {
+  font-size: 1.1rem; /* أصغر شوية */
+  margin-bottom: 8px;
 }
 
-.service__description {
-  font-size: var(--text-size);
-  color: #666;
-  line-height: 1.4;
+.service-card p {
+  font-size: 0.9rem; /* أصغر كمان */
+  color: #fff;
 }
 
-/*================= RESPONSIVE =================*/
-@media (max-width: 768px) {
-  .service__img {
-    width: 100px;
-    height: 100px;
-  }
-  .service__title {
-    font-size: 15px;
-  }
-  .service__description {
-    font-size: 13px;
-  }
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* ========== Projects Section ========== */
@@ -209,6 +190,11 @@ footer {
 @media (max-width: 768px) {
   .service-card, .project-card {
     width: 90%;
+  }
+
+  .service-card::before {
+    width: 100px;
+    height: 100px;
   }
 
   .skills-grid {
