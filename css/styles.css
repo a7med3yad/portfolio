@@ -16,7 +16,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: radial-gradient(circle at top right, #083358, #0f4471, #fc3c3c);
+  background: conic-gradient(#16213e, #0f3460, #533483);
   color: #fff;
   text-align: center;
 }
@@ -78,7 +78,7 @@ section h2 {
 }
 
 .service-card {
-  background: transparent; /* شيل الخلفية */
+  background: transparent;
   border-radius: 15px;
   padding: 20px;
   width: 260px;
@@ -91,8 +91,8 @@ section h2 {
 .service-card::before {
   content: "";
   display: block;
-  width: 120px; /* أكبر من الأول */
-  height: 120px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto 15px auto;
   background-size: contain;
   background-repeat: no-repeat;
@@ -106,19 +106,18 @@ section h2 {
 .service-card:nth-child(5)::before { background-image: var(--service-img-5); }
 
 .service-card h3 {
-  font-size: 1.1rem; /* أصغر شوية */
+  font-size: 1.1rem;
   margin-bottom: 8px;
 }
 
 .service-card p {
-  font-size: 0.9rem; /* أصغر كمان */
+  font-size: 0.9rem;
   color: #fff;
 }
 
-/* خصيصاً لبطاقة Deploy Projects */
 .service-card:nth-child(3) h3,
 .service-card:nth-child(3) p {
-  color: #000; /* خلي النص بالأسود */
+  color: #000;
 }
 
 .service-card:hover {
