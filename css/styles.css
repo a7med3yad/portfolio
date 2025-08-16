@@ -1,41 +1,63 @@
-/* ===== Reset ===== */
+/* ========== Basic Reset ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Body ===== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background: radial-gradient(ellipse at top right, #083358, #0f4471, #fc3c3c);
   color: #fff;
 }
 
-/* ===== Header ===== */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ========== Header ========== */
 header {
   text-align: center;
   padding: 2rem 1rem;
+  background-color: rgba(0,0,0,0.5);
 }
 
-header nav a {
-  margin: 0 0.8rem;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-header nav a:hover {
-  color: #fc3c3c;
+header p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
-/* ===== Sections ===== */
+nav a {
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+/* ========== Container Sections ========== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
 section {
-  padding: 2rem 1rem;
+  margin-bottom: 3rem;
 }
 
-/* ===== Services ===== */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ========== Services ========== */
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -44,14 +66,19 @@ section {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
+  border-radius: 10px;
   width: 250px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* ===== Projects ===== */
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* ========== Projects ========== */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -60,26 +87,45 @@ section {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
   width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
   text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
-/* ===== Skills ===== */
-.skills-icons-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* ========== Skills ========== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem 0;
   font-size: 3rem;
 }
 
-/* ===== Footer ===== */
+/* ========== Contact ========== */
+#contact p {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+/* ========== Footer ========== */
 footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(0,0,0,0.3);
-  margin-top: 2rem;
+  background-color: rgba(0,0,0,0.5);
 }
