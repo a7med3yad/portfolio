@@ -1,107 +1,163 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #0b0f17;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
+/* الخلفية */
 #stars-container {
-  height: 200vh;
-  width: 200%;
-  background: radial-gradient(ellipse at bottom, #1B2735 0%, #191F24 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  z-index: -1;
   overflow: hidden;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
-#stars, #stars::after {
+#stars, #stars2, #stars3 {
+  position: absolute;
   width: 1px;
   height: 1px;
   background: transparent;
-  border-radius: 50%;
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-
-#stars {
-  box-shadow: /* هنا هيجي القيم المولدة من SCSS */;
-  animation: animateStars 28.5s ease-in-out infinite;
-}
-
-#stars::after {
-  box-shadow: /* نفس القيم بتاعة النجوم الصغيرة */;
-}
-
-#stars2, #stars2::after {
-  width: 2px;
-  height: 2px;
-  background: transparent;
-  border-radius: 50%;
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: 0; left: 0; right: 0; bottom: 0;
+  box-shadow: 100px 200px white, 150px 300px white, 200px 400px white, 250px 150px white, 300px 350px white;
 }
 
 #stars2 {
-  box-shadow: /* القيم المولدة للنجوم المتوسطة */;
-  animation: animateStars 30s ease-in-out infinite;
-}
-
-#stars2::after {
-  box-shadow: /* نفس القيم */;
-}
-
-#stars3, #stars3::after {
-  width: 3px;
-  height: 3px;
-  background: transparent;
-  border-radius: 50%;
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: 0; left: 0; right: 0; bottom: 0;
+  width: 2px;
+  height: 2px;
 }
 
 #stars3 {
-  box-shadow: /* القيم المولدة للنجوم الكبيرة */;
-  animation: animateStars 31.5s ease-in-out infinite;
+  width: 3px;
+  height: 3px;
 }
 
-#stars3::after {
-  box-shadow: /* نفس القيم */;
-}
+#stars { animation: animateStars 25s linear infinite; }
+#stars2 { animation: animateStars 35s linear infinite; }
+#stars3 { animation: animateStars 50s linear infinite; }
 
 @keyframes animateStars {
-  0% {
-    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
-    -ms-transform: rotate3d(-1, 1, 0, 0deg);
-    -o-transform: rotate3d(-1, 1, 0, 0deg);
-    transform: rotate3d(-1, 1, 0, 0deg);
-  }
-  25% {
-    -webkit-transform: rotate3d(-1, 1, 0, 30deg);
-    -ms-transform: rotate3d(-1, 1, 0, 30deg);
-    -o-transform: rotate3d(-1, 1, 0, 30deg);
-    transform: rotate3d(-1, 1, 0, 30deg);
-  }
-  50% {
-    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
-    -ms-transform: rotate3d(-1, 1, 0, 0deg);
-    -o-transform: rotate3d(-1, 1, 0, 0deg);
-    transform: rotate3d(-1, 1, 0, 0deg);
-  }
-  75% {
-    -webkit-transform: rotate3d(-1, 1, 0, -30deg);
-    -ms-transform: rotate3d(-1, 1, 0, -30deg);
-    -o-transform: rotate3d(-1, 1, 0, -30deg);
-    transform: rotate3d(-1, 1, 0, -30deg);
-  }
-  100% {
-    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
-    -ms-transform: rotate3d(-1, 1, 0, 0deg);
-    -o-transform: rotate3d(-1, 1, 0, 0deg);
-    transform: rotate3d(-1, 1, 0, 0deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* الهيدر */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #00d4ff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff0080;
+}
+
+/* الأقسام */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00d4ff;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* كروت */
+.card, .service-card, .project-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover, .service-card:hover, .project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Services */
+.services-container, .projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+}
+
+.skills-list li {
+  background: #ff0080;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Contact */
+#contact a {
+  display: inline-block;
+  margin-top: 15px;
+  color: white;
+  background: #ff0080;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+#contact a:hover {
+  background: #00d4ff;
 }
