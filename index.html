@@ -10,10 +10,12 @@
 </head>
 
 <body>
-  <video autoplay muted loop id="video/v1.mp4">
-    <source src="video/v1.mp4" type="video/mp4"/>
+  <!-- ===== Background Video ===== -->
+  <video autoplay muted loop id="bg-video">
+    <source src="images/bg.mp4" type="video/mp4" />
   </video>
 
+  <!-- ===== Header ===== -->
   <header>
     <h1>Ahmed Ayad</h1>
     <p class="subtitle">AI & Software Developer</p>
@@ -28,11 +30,14 @@
   </header>
 
   <div class="container">
+
+    <!-- ===== About Section ===== -->
     <section id="about" class="card fade-up">
       <h2>About Me</h2>
       <p>I'm a passionate AI & Software Developer with strong skills in Machine Learning, Flask, and .NET backend development. I love turning ideas into real-world solutions through code, data, and creativity.</p>
     </section>
 
+    <!-- ===== Services Section ===== -->
     <section id="services" class="card fade-up">
       <h2>Services</h2>
       <div class="services-container">
@@ -54,6 +59,7 @@
       </div>
     </section>
 
+    <!-- ===== Projects Section ===== -->
     <section id="projects" class="card fade-up">
       <h2>Projects</h2>
       <div class="projects-container">
@@ -102,6 +108,7 @@
       </div>
     </section>
 
+    <!-- ===== Skills ===== -->
     <section id="skills" class="card fade-up">
       <h2>Skills</h2>
       <div class="skills-grid">
@@ -114,6 +121,7 @@
       </div>
     </section>
 
+    <!-- ===== Education ===== -->
     <section id="education" class="card fade-up">
       <h2>Education</h2>
       <div class="education-container">
@@ -124,31 +132,54 @@
       </div>
     </section>
 
+    <!-- ===== Contact ===== -->
     <section id="contact" class="card fade-up">
       <h2>Contact Me</h2>
       <p>Send me a message 👇</p>
 
-      <form action="https://formspree.io/f/xnqkrwyo" method="POST" class="contact-form">
+      <form id="contact-form" action="https://formspree.io/f/xnqkrwyo" method="POST" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
+      <p id="form-status"></p>
     </section>
   </div>
 
+  <!-- ===== Footer ===== -->
   <footer>
     <p>© 2025 Ahmed Ayad | All Rights Reserved</p>
   </footer>
 
+  <!-- ===== Animation & Form Script ===== -->
   <script>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.2 });
-
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const status = document.getElementById("form-status");
+      const data = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          status.textContent = "✅ Your message was sent successfully!";
+          form.reset();
+        } else status.textContent = "❌ Error sending message.";
+      } catch (err) {
+        status.textContent = "❌ Network error. Try again later.";
+      }
+    });
   </script>
 </body>
 </html>
