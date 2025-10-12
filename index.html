@@ -19,7 +19,7 @@
 </head>
 <body>
   <!-- Background Video -->
-  <video autoplay muted loop id="bg-video">
+  <video autoplay muted loop playsinline id="bg-video">
     <source src="video/v1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -27,7 +27,7 @@
   <!-- Header -->
   <header>
     <h1>Ahmed Ayad</h1>
-    <p>Data Scientist | .NET Developer</p>
+    <p class="subtitle">Software Engineer • Backend & Cloud (ASP.NET Core, Flask)</p>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -40,100 +40,117 @@
 
   <div class="container">
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="card">
       <h2>About Me</h2>
       <p>
-        I’m passionate about turning messy, complex datasets into clear, actionable insights and building backend systems that make those insights usable in real-world applications.  
-        In Data Science, I focus on cleaning, analyzing, and modeling data to drive smarter decisions.  
-        In Backend Development, I design APIs, manage databases, and create scalable architectures that keep systems running efficiently.  
-        My goal is always to deliver solutions that work in practice — not just in theory.
+        I'm a Software Engineer focused on building reliable backend systems, RESTful APIs and deployable,
+        maintainable software. I work with ASP.NET Core, Flask, SQL databases, and cloud platforms (AWS).
+        I like clean architecture, automated deployments (Docker) and writing code that is easy to maintain.
       </p>
       <a href="#contact" class="btn">Get In Touch</a>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="card">
       <h2>Services</h2>
       <div class="services-container">
-        <div class="service-card" style="background-image: var(--service-img-1);">
+        <div class="service-card">
           <div class="overlay">
-            <h3>Get Insights</h3>
-            <p>Analyze raw data and extract actionable insights to drive smarter decisions.</p>
+            <h3>Backend Development</h3>
+            <p>REST APIs, business logic, authentication, integration with databases.</p>
           </div>
         </div>
-        <div class="service-card" style="background-image: var(--service-img-2);">
+
+        <div class="service-card">
           <div class="overlay">
-            <h3>Build Models</h3>
-            <p>Create predictive and classification models using advanced ML algorithms.</p>
+            <h3>API Design & Integration</h3>
+            <p>Designing API contracts, documentation, and integrating third-party services.</p>
           </div>
         </div>
-        <div class="service-card" style="background-image: var(--service-img-3);">
+
+        <div class="service-card">
           <div class="overlay">
-            <h3>Deploy Projects</h3>
-            <p>Deploy apps and machine learning models using Flask, AWS, or Streamlit.</p>
+            <h3>Deployment & DevOps</h3>
+            <p>Containerization with Docker, CI/CD, and deployment to cloud (AWS).</p>
           </div>
         </div>
-        <div class="service-card" style="background-image: var(--service-img-4);">
+
+        <div class="service-card">
           <div class="overlay">
-            <h3>AI Automation</h3>
-            <p>Automate workflows using AI-powered tools for smarter operations.</p>
+            <h3>Frontend Integration</h3>
+            <p>Building or integrating React or simple UIs to work with backend services.</p>
           </div>
         </div>
-        <div class="service-card" style="background-image: var(--service-img-5);">
+
+        <div class="service-card">
           <div class="overlay">
-            <h3>Backend & APIs</h3>
-            <p>Design scalable and secure APIs using ASP.NET Core or Flask.</p>
+            <h3>Code Reviews & Mentoring</h3>
+            <p>Improving code quality, architecture reviews and best practices.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="card">
       <h2>Projects</h2>
       <div class="projects-container">
+        <!-- Each project opens your GitHub repos page (user asked to open GitHub directly).
+             Later you can change href to a specific repo URL if you want. -->
         <div class="project-card">
-          <img src="images/breast-cancer.png" alt="Breast Cancer Analysis App" />
-          <h3>Breast Cancer Analysis App</h3>
-          <p>Interactive app analyzing breast cancer data using ML techniques.</p>
-          <a href="#" class="btn">Read More</a>
+          <img src="images/breast-cancer.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
+          <h3>Example Project 1</h3>
+          <p>Repository and code available on GitHub.</p>
+          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank" rel="noopener noreferrer">Open on GitHub</a>
         </div>
+
         <div class="project-card">
-          <img src="images/hotel-management-rfm.png" alt="Hotel Management RFM Analysis" />
-          <h3>Hotel Management RFM Analysis</h3>
-          <p>Analyzed hotel data with RFM to enhance marketing and retention.</p>
-          <a href="#" class="btn">Read More</a>
+          <img src="images/hotel-management-rfm.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
+          <h3>Example Project 2</h3>
+          <p>Repository and code available on GitHub.</p>
+          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank" rel="noopener noreferrer">Open on GitHub</a>
         </div>
+
         <div class="project-card">
-          <img src="images/auto-sales.png" alt="Auto Sales Analysis" />
-          <h3>Auto Sales Analysis</h3>
-          <p>Analyzed car sales trends with visualization and predictive insights.</p>
-          <a href="#" class="btn">Read More</a>
+          <img src="images/auto-sales.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
+          <h3>Example Project 3</h3>
+          <p>Repository and code available on GitHub.</p>
+          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank" rel="noopener noreferrer">Open on GitHub</a>
         </div>
       </div>
+      <p style="margin-top:18px; font-size:0.95rem; color:#ddd;">
+        For full list of repositories → <a class="plain-link" href="https://github.com/a7med3yad?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/a7med3yad?tab=repositories</a>
+      </p>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="card">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
-        <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><p>C++</p></div>
         <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C# / .NET</p></div>
+        <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><p>ASP.NET Core</p></div>
+        <div class="skill-item"><i class="devicon-entityframework-plain colored" style="font-size:2.4rem"></i><p>Entity Framework</p></div>
+
+        <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+        <div class="skill-item"><i class="fa-solid fa-flask colored" style="font-size:2.4rem"></i><p>Flask</p></div>
+
+        <div class="skill-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
+        <div class="skill-item"><i class="devicon-react-original colored"></i><p>React</p></div>
         <div class="skill-item"><i class="devicon-html5-plain-wordmark colored"></i><p>HTML</p></div>
         <div class="skill-item"><i class="devicon-css3-plain-wordmark colored"></i><p>CSS</p></div>
-        <div class="skill-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
-        <div class="skill-item"><i class="devicon-react-original-wordmark colored"></i><p>React</p></div>
-        <div class="skill-item"><i class="devicon-tensorflow-original-wordmark colored"></i><p>TensorFlow</p></div>
-        <div class="skill-item"><i class="devicon-scikitlearn-plain colored"></i><p>Scikit-Learn</p></div>
+
         <div class="skill-item"><i class="devicon-mysql-plain-wordmark colored"></i><p>MySQL</p></div>
-        <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><p>AWS</p></div>
+        <div class="skill-item"><i class="devicon-microsoftsqlserver-line-wordmark colored"></i><p>SQL Server</p></div>
+
+        <div class="skill-item"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
+        <div class="skill-item"><i class="devicon-aws-plain colored"></i><p>AWS</p></div>
         <div class="skill-item"><i class="devicon-git-plain-wordmark colored"></i><p>Git & GitHub</p></div>
+        <div class="skill-item"><i class="devicon-linux-plain colored"></i><p>Linux</p></div>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="card">
       <h2>Education</h2>
       <div class="education-container">
         <div class="education-card">
@@ -142,7 +159,7 @@
         </div>
         <div class="education-card">
           <h3>DEPI – Digital Egypt Pioneers Initiative</h3>
-          <p>AI & Data Science Trainee (2025)</p>
+          <p>Trainee (2025)</p>
         </div>
         <div class="education-card">
           <h3>Alexandria Petroleum Company</h3>
@@ -152,14 +169,19 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="card">
       <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
-      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
+      <p><i class="fas fa-envelope"></i> <a class="plain-link" href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a class="plain-link" href="https://github.com/a7med3yad" target="_blank" rel="noopener noreferrer">github.com/a7med3yad</a></p>
+      <p><i class="fab fa-linkedin"></i> <a class="plain-link" href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ahmed-ayad</a></p>
     </section>
   </div>
 
   <footer>&copy; 2025 Ahmed Ayad. All rights reserved.</footer>
+
+  <!-- (Optional) small script to replace placeholder image if missing - already handled with onerror -->
+  <script>
+    /* No extra JS required. Images use onerror attribute to show placeholder.png when missing. */
+  </script>
 </body>
 </html>
