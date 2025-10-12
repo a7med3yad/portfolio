@@ -4,21 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ahmed Ayad | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="images/heizenbe5_favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/heizenbe5_favicon.ico">
+
+  <!-- Font Awesome & DevIcons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 <body>
-  <!-- ===== Background Video ===== -->
-  <video autoplay muted loop id="bg-video">
-    <source src="video/v1.mp4" type="video/mp4" />
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="video/v1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
   </video>
 
-  <!-- ===== Header ===== -->
+  <!-- Header -->
   <header>
     <h1>Ahmed Ayad</h1>
-    <p class="subtitle">AI & Software Developer</p>
+    <p class="subtitle">Software Engineer • Backend & Cloud (ASP.NET Core, Flask)</p>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -29,157 +36,120 @@
     </nav>
   </header>
 
-  <div class="container">
-
-    <!-- ===== About Section ===== -->
-    <section id="about" class="card fade-up">
+  <main class="container">
+    <!-- About -->
+    <section id="about" class="card fade-in">
       <h2>About Me</h2>
-      <p>I'm a passionate AI & Software Developer with strong skills in Machine Learning, Flask, and .NET backend development. I love turning ideas into real-world solutions through code, data, and creativity.</p>
+      <p>
+        I'm a Software Engineer specialized in backend development, RESTful APIs, and cloud deployment.
+        I work mainly with ASP.NET Core, Flask, and SQL databases, focusing on scalable, maintainable architectures.
+        I’m passionate about clean code, DevOps practices (Docker, CI/CD), and building reliable systems.
+      </p>
+      <a href="#contact" class="btn">Get In Touch</a>
     </section>
 
-    <!-- ===== Services Section ===== -->
-    <section id="services" class="card fade-up">
+    <!-- Services -->
+    <section id="services" class="card fade-in">
       <h2>Services</h2>
       <div class="services-container">
-        <div class="service-card">
-          <img src="images/ml.jpg" alt="Machine Learning">
-          <h3>Machine Learning</h3>
-          <p>Building ML models for prediction and analysis using Python, scikit-learn, and PyTorch.</p>
-        </div>
-        <div class="service-card">
-          <img src="images/web.jpg" alt="Web Development">
-          <h3>Web Development</h3>
-          <p>Creating interactive and responsive web apps using Flask, HTML, CSS, and JavaScript.</p>
-        </div>
-        <div class="service-card">
-          <img src="images/api.jpg" alt="API Development">
-          <h3>API Development</h3>
-          <p>Designing RESTful APIs using .NET Core and Flask for secure and scalable backend systems.</p>
-        </div>
+        <div class="service-card"><h3>Backend Development</h3><p>REST APIs, authentication, and database logic.</p></div>
+        <div class="service-card"><h3>API Design & Integration</h3><p>Design, documentation, and 3rd-party integration.</p></div>
+        <div class="service-card"><h3>Deployment & DevOps</h3><p>Docker, CI/CD, and AWS cloud deployment.</p></div>
+        <div class="service-card"><h3>Frontend Integration</h3><p>React-based UIs integrated with backend systems.</p></div>
+        <div class="service-card"><h3>Code Reviews & Mentoring</h3><p>Improving architecture, quality, and clean design.</p></div>
       </div>
     </section>
 
-    <!-- ===== Projects Section ===== -->
-    <section id="projects" class="card fade-up">
+    <!-- Projects -->
+    <section id="projects" class="card fade-in">
       <h2>Projects</h2>
       <div class="projects-container">
         <div class="project-card">
-          <img src="images/project1.jpg" alt="Employees Department API">
-          <h3>Employees Department API</h3>
-          <p>ASP.NET Core API for managing employees and departments.</p>
-          <a href="https://github.com/a7med3yad/Employees-DepartmentApi" target="_blank" class="btn">View Code</a>
+          <img src="images/breast-cancer.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
+          <h3>Breast Cancer Prediction</h3>
+          <p>Machine learning models using Python, Flask, and Streamlit.</p>
+          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank">View on GitHub</a>
         </div>
+
         <div class="project-card">
-          <img src="images/project2.jpg" alt="Car Agencies API">
-          <h3>Car Agencies API</h3>
-          <p>Backend system for managing car agencies and clients using .NET Core.</p>
-          <a href="https://github.com/a7med3yad/Car-Agencies-API" target="_blank" class="btn">View Code</a>
+          <img src="images/hotel-management-rfm.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
+          <h3>Hotel Management System</h3>
+          <p>RFM analysis & booking management web system.</p>
+          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank">View on GitHub</a>
         </div>
+
         <div class="project-card">
-          <img src="images/project3.jpg" alt="BookMarks">
-          <h3>BookMarks</h3>
-          <p>Web app for managing and organizing saved links efficiently.</p>
-          <a href="https://github.com/a7med3yad/BookMarks" target="_blank" class="btn">View Code</a>
-        </div>
-        <div class="project-card">
-          <img src="images/project4.jpg" alt="RestFull API">
-          <h3>RestFull API</h3>
-          <p>Database-first approach RESTful API for structured data management.</p>
-          <a href="https://github.com/a7med3yad/RestFull-API-Using-Data-base-First" target="_blank" class="btn">View Code</a>
-        </div>
-        <div class="project-card">
-          <img src="images/project5.jpg" alt="Smart Room Mentor">
-          <h3>Smart Room Mentor</h3>
-          <p>IoT-based system for smart room automation and environment monitoring.</p>
-          <a href="https://github.com/a7med3yad/SmartRoomMentor" target="_blank" class="btn">View Code</a>
-        </div>
-        <div class="project-card">
-          <img src="images/project6.jpg" alt="Cloud Computing App">
-          <h3>Cloud Computing App</h3>
-          <p>Cloud-based file sharing and management application using AWS and Flask.</p>
-          <a href="https://github.com/a7med3yad/CloudComputingApp" target="_blank" class="btn">View Code</a>
-        </div>
-        <div class="project-card">
-          <img src="images/project7.jpg" alt="University Management System">
-          <h3>University Management System</h3>
-          <p>Comprehensive management system for students, courses, and grades.</p>
-          <a href="https://github.com/a7med3yad/University_Managment_System" target="_blank" class="btn">View Code</a>
+          <img src="images/auto-sales.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
+          <h3>Auto Sales Dashboard</h3>
+          <p>Data visualization dashboard with Flask + Chart.js.</p>
+          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank">View on GitHub</a>
         </div>
       </div>
+      <p class="note">See more → 
+        <a class="plain-link" href="https://github.com/a7med3yad?tab=repositories" target="_blank">github.com/a7med3yad</a>
+      </p>
     </section>
 
-    <!-- ===== Skills ===== -->
-    <section id="skills" class="card fade-up">
+    <!-- Skills -->
+    <section id="skills" class="card fade-in">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-item"><i class="fa-brands fa-python"></i> Python</div>
-        <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript</div>
-        <div class="skill-item"><i class="fa-brands fa-react"></i> React</div>
-        <div class="skill-item"><i class="fa-solid fa-database"></i> SQL</div>
-        <div class="skill-item"><i class="fa-brands fa-aws"></i> AWS</div>
-        <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+        <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C# / .NET</p></div>
+        <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><p>ASP.NET Core</p></div>
+        <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python / Flask</p></div>
+        <div class="skill-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript / React</p></div>
+        <div class="skill-item"><i class="devicon-mysql-plain-wordmark colored"></i><p>MySQL</p></div>
+        <div class="skill-item"><i class="devicon-microsoftsqlserver-line-wordmark colored"></i><p>SQL Server</p></div>
+        <div class="skill-item"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
+        <div class="skill-item"><i class="devicon-aws-plain colored"></i><p>AWS</p></div>
+        <div class="skill-item"><i class="devicon-git-plain-wordmark colored"></i><p>Git & GitHub</p></div>
+        <div class="skill-item"><i class="devicon-linux-plain colored"></i><p>Linux</p></div>
       </div>
     </section>
 
-    <!-- ===== Education ===== -->
-    <section id="education" class="card fade-up">
+    <!-- Education -->
+    <section id="education" class="card fade-in">
       <h2>Education</h2>
       <div class="education-container">
         <div class="education-card">
-          <h3>Alexandria University – B.Sc. Computer & Data Science</h3>
-          <p>Specializing in Artificial Intelligence and Software Engineering.</p>
+          <h3>Alexandria University – Faculty of Data Science</h3>
+          <p>Bachelor’s in Computer and Data Science (2022 – 2026)</p>
+        </div>
+        <div class="education-card">
+          <h3>DEPI – Digital Egypt Pioneers Initiative</h3>
+          <p>Trainee (2025)</p>
+        </div>
+        <div class="education-card">
+          <h3>Alexandria Petroleum Company</h3>
+          <p>Software Engineering Trainee – AI & Flask backend (Summer 2025)</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="card fade-up">
-      <h2>Contact Me</h2>
-      <p>Send me a message 👇</p>
-
-      <form id="contact-form" action="https://formspree.io/f/xnqkrwyo" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-      <p id="form-status"></p>
+    <!-- Contact -->
+    <section id="contact" class="card fade-in">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> <a class="plain-link" href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a class="plain-link" href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
+      <p><i class="fab fa-linkedin"></i> <a class="plain-link" href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
     </section>
-  </div>
+  </main>
 
-  <!-- ===== Footer ===== -->
-  <footer>
-    <p>© 2025 Ahmed Ayad | All Rights Reserved</p>
-  </footer>
+  <footer>&copy; 2025 Ahmed Ayad. All rights reserved.</footer>
 
-  <!-- ===== Animation & Form Script ===== -->
+  <!-- Animation Script -->
   <script>
-    const observer = new IntersectionObserver(entries => {
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
       });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    const form = document.getElementById("contact-form");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const status = document.getElementById("form-status");
-      const data = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          status.textContent = "✅ Your message was sent successfully!";
-          form.reset();
-        } else status.textContent = "❌ Error sending message.";
-      } catch (err) {
-        status.textContent = "❌ Network error. Try again later.";
-      }
-    });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
 </html>
