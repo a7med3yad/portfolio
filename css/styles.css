@@ -5,12 +5,12 @@
   --glass: rgba(255, 255, 255, 0.03);
 }
 
-/* ========== RESET ========== */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 html, body {
@@ -23,18 +23,18 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* ========== BACKGROUND VIDEO ========== */
+/* BACKGROUND VIDEO */
 #bg-video {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.35);
 }
 
-/* ========== HEADER ========== */
+/* HEADER */
 header {
   position: sticky;
   top: 0;
@@ -57,10 +57,6 @@ header h1 {
   font-size: 0.95rem;
 }
 
-header nav {
-  margin-top: 8px;
-}
-
 header nav a {
   margin: 0 10px;
   color: #fff;
@@ -72,7 +68,7 @@ header nav a:hover {
   color: var(--main-color);
 }
 
-/* ========== CONTAINER & CARDS ========== */
+/* CONTAINER & CARD */
 .container {
   max-width: 1100px;
   margin: 28px auto;
@@ -87,27 +83,21 @@ header nav a:hover {
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
+  transition: all 0.8s ease;
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ========== TITLES ========== */
+/* TITLES */
 h2 {
   color: var(--main-color);
-  font-size: 1.4rem;
-  margin-bottom: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   text-align: center;
+  margin-bottom: 14px;
 }
 
-/* ========== BUTTONS ========== */
+/* BUTTON */
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -117,25 +107,20 @@ h2 {
   background: transparent;
   font-weight: 700;
   transition: all 0.2s ease;
-  text-decoration: none;
 }
-
 .btn:hover {
   background: var(--main-color);
   color: #000;
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.14);
 }
 
-/* ========== SERVICES ========== */
+/* SERVICES */
 .services-container {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
   justify-content: center;
-  margin-top: 10px;
 }
-
 .service-card {
   width: 220px;
   border-radius: 12px;
@@ -145,52 +130,27 @@ h2 {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
-
 .service-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
 }
-
-.service-media {
+.service-card img {
   width: 100%;
   height: 120px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-media img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
 }
-
-.service-card:hover .service-media img {
-  transform: scale(1.08);
-}
-
 .service-card h3 {
   color: var(--main-color);
   margin: 12px 8px 6px;
 }
 
-.service-card p {
-  color: #ddd;
-  padding: 0 10px 14px;
-  font-size: 0.9rem;
-}
-
-/* ========== PROJECTS ========== */
+/* PROJECTS */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
   justify-content: center;
-  margin-top: 12px;
 }
-
 .project-card {
   width: 280px;
   border-radius: 10px;
@@ -199,138 +159,64 @@ h2 {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
-
 .project-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
 }
-
 .project-card img {
   width: 100%;
   height: 160px;
   object-fit: cover;
   display: block;
-  transition: transform 0.45s ease;
 }
 
-.project-card:hover img {
-  transform: scale(1.06);
-}
-
-.project-body {
-  padding: 12px;
-}
-
-.project-body h3 {
-  color: var(--main-color);
-  margin-bottom: 6px;
-}
-
-.project-body p {
-  color: #ddd;
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-/* ========== CONTACT FORM ========== */
+/* CONTACT */
 #contact {
-  padding: 60px 20px;
   background: #0f172a;
-  color: #f8fafc;
+  padding: 60px 20px;
   border-radius: 16px;
-  max-width: 800px;
-  margin: 60px auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-
 #contact h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 2rem;
   color: #38bdf8;
 }
-
-#contact p {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #cbd5e1;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #e2e8f0;
-}
-
-.form-group input,
-.form-group textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #334155;
   background-color: #1e293b;
   color: white;
   outline: none;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
-
-.form-group input:focus,
-.form-group textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: #38bdf8;
   box-shadow: 0 0 5px #38bdf8;
 }
-
-.btn {
-  background-color: #38bdf8;
-  color: #0f172a;
-  font-weight: bold;
-  border: none;
-  padding: 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
+#form-status {
+  text-align: center;
+  margin-top: 12px;
 }
 
-.btn:hover {
-  background-color: #0ea5e9;
-  transform: scale(1.03);
-}
-
-/* ========== FOOTER ========== */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 18px;
   color: #aaa;
-  margin-top: 14px;
 }
 
-/* ========== RESPONSIVE ========== */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 8px;
-  }
-
-  .project-card {
-    width: 100%;
-    max-width: 520px;
-  }
-
+  .project-card,
   .service-card {
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
   }
 }
