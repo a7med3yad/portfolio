@@ -1,5 +1,5 @@
 :root{
-  --main-color: #ffcc00;
+  --main-color: #1e90ff; /* بدل الأصفر */
   --text: #fff;
   --card-bg: rgba(0,0,0,0.45);
   --glass: rgba(255,255,255,0.03);
@@ -62,7 +62,7 @@ h2{ color:var(--main-color); font-size:1.4rem; margin-bottom:14px; text-transfor
 
 /* Buttons */
 .btn{ display:inline-block; padding:10px 16px; border-radius:22px; border:2px solid var(--main-color); color:var(--main-color); background:transparent; font-weight:700; transition: all .2s ease; text-decoration:none; }
-.btn:hover{ background:var(--main-color); color:#000; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(255,204,0,0.14); }
+.btn:hover{ background:var(--main-color); color:#000; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(30,144,255,0.14); }
 
 /* Services */
 .services-container{ display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:10px; }
