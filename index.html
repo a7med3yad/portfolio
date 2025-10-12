@@ -14,7 +14,15 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* إزالة الـ underline من الروابط */
+    a {
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
   <!-- Background Video -->
   <video autoplay muted loop playsinline id="bg-video">
@@ -37,7 +45,6 @@
   </header>
 
   <main class="container">
-
     <!-- About -->
     <section id="about" class="card fade-up">
       <h2>About Me</h2>
@@ -98,7 +105,6 @@
     <section id="projects" class="card fade-up">
       <h2>Projects</h2>
       <div class="projects-container">
-        <!-- Real projects (7) - using the repo links you provided -->
         <div class="project-card">
           <img src="images/project1.jpg" alt="Employees Department API" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
@@ -127,7 +133,7 @@
         </div>
 
         <div class="project-card">
-          <img src="images/project4.jpg" alt="RestFull API Using Data base First" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project4.jpg" alt="RestFull API Using Database First" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>RestFull API (Database-First)</h3>
             <p>API built using database-first approach and EF mappings.</p>
@@ -161,42 +167,31 @@
             <a class="btn" href="https://github.com/a7med3yad/University_Managment_System" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
+      </div>
+    </section>
 
     <!-- Skills -->
     <section id="skills" class="card fade-up">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <!-- Core Backend -->
         <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C# / .NET</p></div>
         <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python / Flask</p></div>
         <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><p>Node.js (APIs)</p></div>
-
-        <!-- Databases -->
         <div class="skill-item"><i class="devicon-mysql-plain-wordmark colored"></i><p>MySQL</p></div>
         <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><p>PostgreSQL</p></div>
         <div class="skill-item"><i class="devicon-microsoftsqlserver-line-wordmark colored"></i><p>SQL Server</p></div>
-
-        <!-- Frontend -->
         <div class="skill-item"><i class="devicon-react-original colored"></i><p>React</p></div>
         <div class="skill-item"><i class="devicon-html5-plain-wordmark colored"></i><p>HTML</p></div>
         <div class="skill-item"><i class="devicon-css3-plain-wordmark colored"></i><p>CSS</p></div>
-
-        <!-- DevOps & Cloud -->
         <div class="skill-item"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
         <div class="skill-item"><i class="devicon-aws-plain colored"></i><p>AWS</p></div>
         <div class="skill-item"><i class="devicon-linux-plain colored"></i><p>Linux</p></div>
-
-        <!-- Tools & Practices -->
         <div class="skill-item"><i class="devicon-git-plain-wordmark colored"></i><p>Git & GitHub</p></div>
-        <div class="skill-item"><i class="fa fa-lock colored" aria-hidden="true"></i><p>Security Basics (JWT)</p></div>
-        <div class="skill-item"><i class="fa fa-chart-line colored" aria-hidden="true"></i><p>Monitoring & Logging</p></div>
-
-        <!-- Soft/Other -->
-        <div class="skill-item"><i class="fa fa-project-diagram colored" aria-hidden="true"></i><p>Clean Architecture</p></div>
-        <div class="skill-item"><i class="fa fa-users colored" aria-hidden="true"></i><p>Code Reviews & Mentoring</p></div>
+        <div class="skill-item"><i class="fa fa-lock colored"></i><p>Security Basics (JWT)</p></div>
+        <div class="skill-item"><i class="fa fa-chart-line colored"></i><p>Monitoring & Logging</p></div>
+        <div class="skill-item"><i class="fa fa-project-diagram colored"></i><p>Clean Architecture</p></div>
+        <div class="skill-item"><i class="fa fa-users colored"></i><p>Code Reviews & Mentoring</p></div>
       </div>
-
-    
     </section>
 
     <!-- Education -->
@@ -221,25 +216,19 @@
     <!-- Contact -->
     <section id="contact" class="card fade-up">
       <h2>Contact</h2>
-
-      <!-- Contact form: EmailJS integration (replace placeholders) -->
       <form id="contact-form">
         <div class="form-row">
           <input type="text" id="name" name="name" placeholder="Your name" required>
           <input type="email" id="email" name="email" placeholder="Your email" required>
         </div>
         <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
-
         <div class="form-actions">
           <button type="submit" class="btn">Send Message</button>
         </div>
-
         <p id="form-status" style="margin-top:12px;color:#ddd;"></p>
       </form>
 
-      <p style="margin-top:18px;">
-        Or contact directly:
-      </p>
+      <p style="margin-top:18px;">Or contact directly:</p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
       <p><i class="fab fa-github"></i> <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
       <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
@@ -248,14 +237,12 @@
 
   <footer>&copy; 2025 Ahmed Ayad. All rights reserved.</footer>
 
-  <!-- EmailJS SDK (optional) -->
+  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <script>
-    /***********************
-     * Scroll animations (fade-up)
-     ***********************/
-    const observer = new IntersectionObserver((entries) => {
+    // Fade-up animation
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
@@ -265,82 +252,21 @@
     }, { threshold: 0.15 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    // also observe dynamically added project cards
-    document.querySelectorAll('.project-card').forEach(el => observer.observe(el));
 
-    /***********************
-     * Skill input send (just UI - posts to GitHub issues or your API could be added)
-     ***********************/
-    const sendSkillBtn = document.getElementById('send-skill');
-    const skillInput = document.getElementById('skill-input');
-    const skillMsg = document.getElementById('skill-msg');
-    sendSkillBtn.addEventListener('click', () => {
-      const val = skillInput.value.trim();
-      if (!val) {
-        skillMsg.textContent = 'اكتب اسم السكيل الأول عشان ابعتهولك.';
-        return;
-      }
-      // For now: just show message; you can integrate an API later to save it.
-      skillMsg.textContent = `تم استلام: "${val}". هضيفه أول ما تبعتلي تأكيد.`;
-      skillInput.value = '';
-    });
-
-    /***********************
-     * Contact form - EmailJS integration with fallback
-     *
-     * To make EmailJS work:
-     * 1) Create account at https://www.emailjs.com/
-     * 2) Add an email service and create a template.
-     * 3) Replace the placeholders below:
-     *    emailjs.init('YOUR_USER_ID');
-     *    const SERVICE_ID = 'YOUR_SERVICE_ID';
-     *    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-     *
-     * If you don't configure EmailJS, the code will fall back to opening mailto: in the user's mail client.
-     ***********************/
-    // Replace these when you have EmailJS credentials
-    const EMAILJS_USER_ID = 'YOUR_EMAILJS_USER_ID';
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-
-    // init if user provided ID
-    if (EMAILJS_USER_ID && EMAILJS_USER_ID !== 'YOUR_EMAILJS_USER_ID') {
-      emailjs.init(EMAILJS_USER_ID);
-    }
-
+    // Contact Form
+    const EMAILJS_USER_ID = '';
+    const SERVICE_ID = '';
+    const TEMPLATE_ID = '';
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
 
-    contactForm.addEventListener('submit', function (e) {
+    contactForm.addEventListener('submit', e => {
       e.preventDefault();
-      formStatus.textContent = 'Sending...';
-
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
-
-      // If EmailJS configured -> send using EmailJS
-      if (EMAILJS_USER_ID && EMAILJS_USER_ID !== 'YOUR_EMAILJS_USER_ID' &&
-          SERVICE_ID && TEMPLATE_ID &&
-          SERVICE_ID !== 'YOUR_SERVICE_ID' && TEMPLATE_ID !== 'YOUR_TEMPLATE_ID') {
-
-        const templateParams = { from_name: name, from_email: email, message: message };
-        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
-          .then(() => {
-            formStatus.textContent = 'Message sent — thanks!';
-            contactForm.reset();
-          }, (err) => {
-            console.error(err);
-            formStatus.textContent = 'Error sending message. Falling back to mailto.';
-            // fallback to mailto
-            window.location.href = `mailto:ahmed.ibrahim01974@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + name + ' <' + email + '>')}`;
-          });
-
-      } else {
-        // Fallback: open user's email client with a prepared email
-        formStatus.textContent = 'Opening mail client...';
-        window.location.href = `mailto:ahmed.ibrahim01974@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + name + ' <' + email + '>')}`;
-      }
+      formStatus.textContent = 'Opening mail client...';
+      window.location.href = `mailto:ahmed.ibrahim01974@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' <' + email + '>')}`;
     });
   </script>
 </body>
