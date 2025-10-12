@@ -162,31 +162,6 @@
           </div>
         </div>
 
-        <!-- 26 placeholders to reach 33 total -->
-        <!-- These will use placeholder.png unless you add project8.jpg .. project33.jpg -->
-        <script>
-          // We'll append placeholders 8..33 dynamically
-          (function addPlaceholders() {
-            const container = document.currentScript.parentElement;
-            for (let i = 8; i <= 33; i++) {
-              const card = document.createElement('div');
-              card.className = 'project-card';
-              card.innerHTML = `
-                <img src="images/project${i}.jpg" alt="Project ${i}" onerror="this.src='images/placeholder.png'"/>
-                <div class="project-body">
-                  <h3>Project ${i}</h3>
-                  <p>Short description about project ${i}.</p>
-                  <a class="btn" href="#" target="_blank" rel="noopener">View Details</a>
-                </div>
-              `;
-              container.appendChild(card);
-            }
-          })();
-        </script>
-      </div>
-      <p class="note">See more → <a class="plain-link" href="https://github.com/a7med3yad?tab=repositories" target="_blank">github.com/a7med3yad</a></p>
-    </section>
-
     <!-- Skills -->
     <section id="skills" class="card fade-up">
       <h2>Skills</h2>
