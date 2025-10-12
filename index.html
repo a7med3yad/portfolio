@@ -37,13 +37,13 @@
   </header>
 
   <main class="container">
+
     <!-- About -->
     <section id="about" class="card fade-in">
       <h2>About Me</h2>
       <p>
         I'm a Software Engineer specialized in backend development, RESTful APIs, and cloud deployment.
         I work mainly with ASP.NET Core, Flask, and SQL databases, focusing on scalable, maintainable architectures.
-        I’m passionate about clean code, DevOps practices (Docker, CI/CD), and building reliable systems.
       </p>
       <a href="#contact" class="btn">Get In Touch</a>
     </section>
@@ -53,29 +53,29 @@
       <h2>Services</h2>
       <div class="services-container">
         <div class="service-card">
-          <img src="images/backend.png" alt="Backend Development">
+          <img src="images/backend.jpg" alt="Backend Development">
           <h3>Backend Development</h3>
-          <p>REST APIs, authentication, and database logic.</p>
+          <p>REST APIs, authentication, and database design.</p>
         </div>
         <div class="service-card">
-          <img src="images/api.png" alt="API Design">
+          <img src="images/api.jpg" alt="API Design">
           <h3>API Design & Integration</h3>
-          <p>Design, documentation, and 3rd-party integration.</p>
+          <p>API design, documentation, and 3rd-party integration.</p>
         </div>
         <div class="service-card">
-          <img src="images/devops.png" alt="DevOps">
+          <img src="images/devops.jpg" alt="DevOps">
           <h3>Deployment & DevOps</h3>
-          <p>Docker, CI/CD, and AWS cloud deployment.</p>
+          <p>Docker, CI/CD pipelines, and AWS cloud hosting.</p>
         </div>
         <div class="service-card">
-          <img src="images/frontend.png" alt="Frontend Integration">
+          <img src="images/frontend.jpg" alt="Frontend Integration">
           <h3>Frontend Integration</h3>
-          <p>React-based UIs integrated with backend systems.</p>
+          <p>React frontends integrated with robust backends.</p>
         </div>
         <div class="service-card">
-          <img src="images/review.png" alt="Code Review">
+          <img src="images/review.jpg" alt="Code Review">
           <h3>Code Reviews & Mentoring</h3>
-          <p>Improving architecture, quality, and clean design.</p>
+          <p>Improving architecture, readability, and performance.</p>
         </div>
       </div>
     </section>
@@ -83,10 +83,18 @@
     <!-- Projects -->
     <section id="projects" class="card fade-in">
       <h2>Projects</h2>
-      <div class="projects-container" id="projects-grid"></div>
-      <p class="note">See more → 
-        <a class="plain-link" href="https://github.com/a7med3yad?tab=repositories" target="_blank">github.com/a7med3yad</a>
-      </p>
+      <div class="projects-container">
+        <!-- Generate 33 cards -->
+        <!-- You can replace the placeholder images later -->
+        ${Array.from({ length: 33 }, (_, i) => `
+        <div class="project-card">
+          <img src="images/project${i + 1}.jpg" alt="Project ${i + 1}" onerror="this.src='images/placeholder.png'">
+          <h3>Project ${i + 1}</h3>
+          <p>Short description about project ${i + 1} goes here.</p>
+          <a class="btn" href="#" target="_blank">View Details</a>
+        </div>
+        `).join('')}
+      </div>
     </section>
 
     <!-- Skills -->
@@ -128,9 +136,9 @@
     <!-- Contact -->
     <section id="contact" class="card fade-in">
       <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> <a class="plain-link" href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
-      <p><i class="fab fa-github"></i> <a class="plain-link" href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
-      <p><i class="fab fa-linkedin"></i> <a class="plain-link" href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
     </section>
   </main>
 
@@ -138,7 +146,6 @@
 
   <!-- Animation Script -->
   <script>
-    // Scroll animations
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = { threshold: 0.2 };
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
@@ -151,18 +158,19 @@
     }, appearOptions);
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Generate 36 project placeholders
-    const grid = document.getElementById('projects-grid');
-    for(let i = 1; i <= 36; i++) {
-      const card = document.createElement('div');
-      card.className = 'project-card';
-      card.innerHTML = `
-        <img src="images/project${i}.jpg" alt="Project ${i}" onerror="this.src='images/placeholder.png'"/>
-        <h3>Project ${i}</h3>
-        <p>Short description for project ${i}.</p>
-        <a class="btn" href="#" target="_blank">View Project</a>
-      `;
-      grid.appendChild(card);
+    // Generate 33 project cards dynamically
+    const projectsContainer = document.querySelector('.projects-container');
+    if(projectsContainer){
+      projectsContainer.innerHTML = '';
+      for(let i = 1; i <= 33; i++){
+        projectsContainer.innerHTML += `
+          <div class="project-card fade-in">
+            <img src="images/project${i}.jpg" alt="Project ${i}" onerror="this.src='images/placeholder.png'"/>
+            <h3>Project ${i}</h3>
+            <p>Short description about project ${i}.</p>
+            <a class="btn" href="#">View Details</a>
+          </div>`;
+      }
     }
   </script>
 </body>
