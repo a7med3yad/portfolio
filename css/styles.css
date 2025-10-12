@@ -1,7 +1,7 @@
 :root {
   --main-color: #ffcc00;
   --text: #fff;
-  --card-bg: rgba(0,0,0,0.45);
+  --card-bg: rgba(0, 0, 0, 0.45);
 }
 
 /* Background Video */
@@ -21,6 +21,7 @@ body {
   color: var(--text);
   background: transparent;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -32,6 +33,7 @@ header {
   padding: 18px 10px;
   text-align: center;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  animation: fadeDown 1s ease;
 }
 header h1 { color: var(--main-color); font-size: 2.2rem; margin-bottom: 4px; }
 .subtitle { color: #ddd; margin-bottom: 10px; }
@@ -67,6 +69,7 @@ h2 {
   margin-bottom: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 /* Buttons */
@@ -95,12 +98,18 @@ h2 {
   justify-content: center;
 }
 .service-card {
-  width: 220px; height: 140px;
+  width: 220px;
   border-radius: 10px;
   background: rgba(255,255,255,0.04);
   padding: 14px;
   text-align: center;
   transition: transform .25s, box-shadow .25s;
+}
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 8px var(--main-color));
 }
 .service-card h3 { color: var(--main-color); margin-bottom: 8px; }
 .service-card p { color: #ccc; font-size: 0.9rem; }
@@ -111,35 +120,36 @@ h2 {
 
 /* Projects */
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 18px;
   justify-content: center;
 }
 .project-card {
-  width: 280px;
   border-radius: 10px;
   overflow: hidden;
   background: rgba(0,0,0,0.35);
-  transition: transform .25s;
+  transition: transform .25s, box-shadow .25s;
 }
 .project-card img {
   width: 100%;
-  height: 170px;
+  height: 160px;
   object-fit: cover;
   display: block;
 }
 .project-card h3 {
   color: var(--main-color);
-  padding: 12px;
+  padding: 10px 12px 4px;
 }
 .project-card p {
   color: #ddd;
   padding: 0 12px 12px;
 }
-.project-card .btn { margin: 12px; }
-.project-card:hover { transform: translateY(-6px); }
-.note { margin-top: 18px; font-size: 0.95rem; color: #ddd; text-align:center; }
+.project-card .btn { margin: 0 12px 12px; }
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
 
 /* Skills */
 .skills-grid {
@@ -168,12 +178,19 @@ h2 {
 .education-card h3 { color: var(--main-color); margin-bottom: 4px; }
 
 /* Contact & Footer */
-#contact p { color: #ddd; margin-bottom: 8px; }
+#contact p { color: #ddd; margin-bottom: 8px; text-align: center; }
 footer {
   text-align: center;
   padding: 18px;
   color: #aaa;
   margin-top: 14px;
+  background: rgba(0,0,0,0.4);
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
