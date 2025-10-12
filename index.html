@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ahmed Ayad | Portfolio</title>
 
   <!-- Favicon -->
@@ -37,78 +37,200 @@
   </header>
 
   <main class="container">
+
     <!-- About -->
-    <section id="about" class="card fade-in">
+    <section id="about" class="card fade-up">
       <h2>About Me</h2>
       <p>
         I'm a Software Engineer specialized in backend development, RESTful APIs, and cloud deployment.
         I work mainly with ASP.NET Core, Flask, and SQL databases, focusing on scalable, maintainable architectures.
-        I’m passionate about clean code, DevOps practices (Docker, CI/CD), and building reliable systems.
       </p>
       <a href="#contact" class="btn">Get In Touch</a>
     </section>
 
     <!-- Services -->
-    <section id="services" class="card fade-in">
+    <section id="services" class="card fade-up">
       <h2>Services</h2>
       <div class="services-container">
-        <div class="service-card"><h3>Backend Development</h3><p>REST APIs, authentication, and database logic.</p></div>
-        <div class="service-card"><h3>API Design & Integration</h3><p>Design, documentation, and 3rd-party integration.</p></div>
-        <div class="service-card"><h3>Deployment & DevOps</h3><p>Docker, CI/CD, and AWS cloud deployment.</p></div>
-        <div class="service-card"><h3>Frontend Integration</h3><p>React-based UIs integrated with backend systems.</p></div>
-        <div class="service-card"><h3>Code Reviews & Mentoring</h3><p>Improving architecture, quality, and clean design.</p></div>
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/backend.jpg" alt="Backend Development">
+          </div>
+          <h3>Backend Development</h3>
+          <p>REST APIs, authentication, and database design (ASP.NET Core, Flask).</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/api.jpg" alt="API Design">
+          </div>
+          <h3>API Design & Integration</h3>
+          <p>API contracts, OpenAPI docs, third-party integrations and testing.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/devops.jpg" alt="DevOps">
+          </div>
+          <h3>Deployment & DevOps</h3>
+          <p>Docker, CI/CD pipelines, infra as code, and AWS deployments.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/frontend.jpg" alt="Frontend Integration">
+          </div>
+          <h3>Frontend Integration</h3>
+          <p>Connect React or simple UIs to scalable backend services.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/review.jpg" alt="Code Review">
+          </div>
+          <h3>Code Reviews & Mentoring</h3>
+          <p>Architecture reviews, clean code, performance improvements.</p>
+        </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="card fade-in">
+    <section id="projects" class="card fade-up">
       <h2>Projects</h2>
       <div class="projects-container">
+        <!-- Real projects (7) - using the repo links you provided -->
         <div class="project-card">
-          <img src="images/breast-cancer.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
-          <h3>Breast Cancer Prediction</h3>
-          <p>Machine learning models using Python, Flask, and Streamlit.</p>
-          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank">View on GitHub</a>
+          <img src="images/project1.jpg" alt="Employees Department API" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>Employees Department API</h3>
+            <p>API to manage employees and departments with CRUD operations.</p>
+            <a class="btn" href="https://github.com/a7med3yad/Employees-DepartmentApi" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
         </div>
 
         <div class="project-card">
-          <img src="images/hotel-management-rfm.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
-          <h3>Hotel Management System</h3>
-          <p>RFM analysis & booking management web system.</p>
-          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank">View on GitHub</a>
+          <img src="images/project2.jpg" alt="Car Agencies API" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>Car Agencies API</h3>
+            <p>REST API for managing car agencies, inventory and sales.</p>
+            <a class="btn" href="https://github.com/a7med3yad/Car-Agencies-API" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
         </div>
 
         <div class="project-card">
-          <img src="images/auto-sales.png" alt="Project image" onerror="this.src='images/placeholder.png'"/>
-          <h3>Auto Sales Dashboard</h3>
-          <p>Data visualization dashboard with Flask + Chart.js.</p>
-          <a class="btn" href="https://github.com/a7med3yad?tab=repositories" target="_blank">View on GitHub</a>
+          <img src="images/project3.jpg" alt="BookMarks" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>BookMarks</h3>
+            <p>Bookmark manager app with categorization and search features.</p>
+            <a class="btn" href="https://github.com/a7med3yad/BookMarks" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
         </div>
+
+        <div class="project-card">
+          <img src="images/project4.jpg" alt="RestFull API Using Data base First" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>RestFull API (Database-First)</h3>
+            <p>API built using database-first approach and EF mappings.</p>
+            <a class="btn" href="https://github.com/a7med3yad/RestFull-API-Using-Data-base-First" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/project5.jpg" alt="SmartRoomMentor" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>SmartRoomMentor</h3>
+            <p>Smart classroom assistant app for mentoring and resource sharing.</p>
+            <a class="btn" href="https://github.com/a7med3yad/SmartRoomMentor" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/project6.jpg" alt="CloudComputingApp" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>CloudComputingApp</h3>
+            <p>Cloud-based app demonstrating basic cloud services and deployment.</p>
+            <a class="btn" href="https://github.com/a7med3yad/CloudComputingApp" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/project7.jpg" alt="University Management System" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>University Management System</h3>
+            <p>System for managing students, courses and academic processes.</p>
+            <a class="btn" href="https://github.com/a7med3yad/University_Managment_System" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+
+        <!-- 26 placeholders to reach 33 total -->
+        <!-- These will use placeholder.png unless you add project8.jpg .. project33.jpg -->
+        <script>
+          // We'll append placeholders 8..33 dynamically
+          (function addPlaceholders() {
+            const container = document.currentScript.parentElement;
+            for (let i = 8; i <= 33; i++) {
+              const card = document.createElement('div');
+              card.className = 'project-card';
+              card.innerHTML = `
+                <img src="images/project${i}.jpg" alt="Project ${i}" onerror="this.src='images/placeholder.png'"/>
+                <div class="project-body">
+                  <h3>Project ${i}</h3>
+                  <p>Short description about project ${i}.</p>
+                  <a class="btn" href="#" target="_blank" rel="noopener">View Details</a>
+                </div>
+              `;
+              container.appendChild(card);
+            }
+          })();
+        </script>
       </div>
-      <p class="note">See more → 
-        <a class="plain-link" href="https://github.com/a7med3yad?tab=repositories" target="_blank">github.com/a7med3yad</a>
-      </p>
+      <p class="note">See more → <a class="plain-link" href="https://github.com/a7med3yad?tab=repositories" target="_blank">github.com/a7med3yad</a></p>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="card fade-in">
+    <section id="skills" class="card fade-up">
       <h2>Skills</h2>
       <div class="skills-grid">
+        <!-- Core Backend -->
         <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C# / .NET</p></div>
-        <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><p>ASP.NET Core</p></div>
         <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python / Flask</p></div>
-        <div class="skill-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript / React</p></div>
+        <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><p>Node.js (APIs)</p></div>
+
+        <!-- Databases -->
         <div class="skill-item"><i class="devicon-mysql-plain-wordmark colored"></i><p>MySQL</p></div>
+        <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><p>PostgreSQL</p></div>
         <div class="skill-item"><i class="devicon-microsoftsqlserver-line-wordmark colored"></i><p>SQL Server</p></div>
+
+        <!-- Frontend -->
+        <div class="skill-item"><i class="devicon-react-original colored"></i><p>React</p></div>
+        <div class="skill-item"><i class="devicon-html5-plain-wordmark colored"></i><p>HTML</p></div>
+        <div class="skill-item"><i class="devicon-css3-plain-wordmark colored"></i><p>CSS</p></div>
+
+        <!-- DevOps & Cloud -->
         <div class="skill-item"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
         <div class="skill-item"><i class="devicon-aws-plain colored"></i><p>AWS</p></div>
-        <div class="skill-item"><i class="devicon-git-plain-wordmark colored"></i><p>Git & GitHub</p></div>
         <div class="skill-item"><i class="devicon-linux-plain colored"></i><p>Linux</p></div>
+
+        <!-- Tools & Practices -->
+        <div class="skill-item"><i class="devicon-git-plain-wordmark colored"></i><p>Git & GitHub</p></div>
+        <div class="skill-item"><i class="fa fa-lock colored" aria-hidden="true"></i><p>Security Basics (JWT)</p></div>
+        <div class="skill-item"><i class="fa fa-chart-line colored" aria-hidden="true"></i><p>Monitoring & Logging</p></div>
+
+        <!-- Soft/Other -->
+        <div class="skill-item"><i class="fa fa-project-diagram colored" aria-hidden="true"></i><p>Clean Architecture</p></div>
+        <div class="skill-item"><i class="fa fa-users colored" aria-hidden="true"></i><p>Code Reviews & Mentoring</p></div>
+      </div>
+
+      <div class="skill-note">
+        <p>لو عايز تضيف Skill مش موجودة، اكتبها هنا ثم ابعتلي رسالة وسيب الباقي عليا:</p>
+        <textarea id="skill-input" placeholder="اكتب هنا السكيل اللي عايز أضيفها"></textarea>
+        <button id="send-skill" class="btn">Send Skill</button>
+        <p id="skill-msg" style="margin-top:10px;color:#ddd;"></p>
       </div>
     </section>
 
     <!-- Education -->
-    <section id="education" class="card fade-in">
+    <section id="education" class="card fade-up">
       <h2>Education</h2>
       <div class="education-container">
         <div class="education-card">
@@ -127,29 +249,129 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="card fade-in">
+    <section id="contact" class="card fade-up">
       <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> <a class="plain-link" href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
-      <p><i class="fab fa-github"></i> <a class="plain-link" href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
-      <p><i class="fab fa-linkedin"></i> <a class="plain-link" href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
+
+      <!-- Contact form: EmailJS integration (replace placeholders) -->
+      <form id="contact-form">
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+
+        <p id="form-status" style="margin-top:12px;color:#ddd;"></p>
+      </form>
+
+      <p style="margin-top:18px;">
+        Or contact directly:
+      </p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
     </section>
   </main>
 
   <footer>&copy; 2025 Ahmed Ayad. All rights reserved.</footer>
 
-  <!-- Animation Script -->
+  <!-- EmailJS SDK (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
   <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2 };
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    /***********************
+     * Scroll animations (fade-up)
+     ***********************/
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    // also observe dynamically added project cards
+    document.querySelectorAll('.project-card').forEach(el => observer.observe(el));
+
+    /***********************
+     * Skill input send (just UI - posts to GitHub issues or your API could be added)
+     ***********************/
+    const sendSkillBtn = document.getElementById('send-skill');
+    const skillInput = document.getElementById('skill-input');
+    const skillMsg = document.getElementById('skill-msg');
+    sendSkillBtn.addEventListener('click', () => {
+      const val = skillInput.value.trim();
+      if (!val) {
+        skillMsg.textContent = 'اكتب اسم السكيل الأول عشان ابعتهولك.';
+        return;
+      }
+      // For now: just show message; you can integrate an API later to save it.
+      skillMsg.textContent = `تم استلام: "${val}". هضيفه أول ما تبعتلي تأكيد.`;
+      skillInput.value = '';
+    });
+
+    /***********************
+     * Contact form - EmailJS integration with fallback
+     *
+     * To make EmailJS work:
+     * 1) Create account at https://www.emailjs.com/
+     * 2) Add an email service and create a template.
+     * 3) Replace the placeholders below:
+     *    emailjs.init('YOUR_USER_ID');
+     *    const SERVICE_ID = 'YOUR_SERVICE_ID';
+     *    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+     *
+     * If you don't configure EmailJS, the code will fall back to opening mailto: in the user's mail client.
+     ***********************/
+    // Replace these when you have EmailJS credentials
+    const EMAILJS_USER_ID = 'YOUR_EMAILJS_USER_ID';
+    const SERVICE_ID = 'YOUR_SERVICE_ID';
+    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+    // init if user provided ID
+    if (EMAILJS_USER_ID && EMAILJS_USER_ID !== 'YOUR_EMAILJS_USER_ID') {
+      emailjs.init(EMAILJS_USER_ID);
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      formStatus.textContent = 'Sending...';
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // If EmailJS configured -> send using EmailJS
+      if (EMAILJS_USER_ID && EMAILJS_USER_ID !== 'YOUR_EMAILJS_USER_ID' &&
+          SERVICE_ID && TEMPLATE_ID &&
+          SERVICE_ID !== 'YOUR_SERVICE_ID' && TEMPLATE_ID !== 'YOUR_TEMPLATE_ID') {
+
+        const templateParams = { from_name: name, from_email: email, message: message };
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+          .then(() => {
+            formStatus.textContent = 'Message sent — thanks!';
+            contactForm.reset();
+          }, (err) => {
+            console.error(err);
+            formStatus.textContent = 'Error sending message. Falling back to mailto.';
+            // fallback to mailto
+            window.location.href = `mailto:ahmed.ibrahim01974@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + name + ' <' + email + '>')}`;
+          });
+
+      } else {
+        // Fallback: open user's email client with a prepared email
+        formStatus.textContent = 'Opening mail client...';
+        window.location.href = `mailto:ahmed.ibrahim01974@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent(message + '\\n\\nFrom: ' + name + ' <' + email + '>')}`;
+      }
+    });
   </script>
 </body>
 </html>
