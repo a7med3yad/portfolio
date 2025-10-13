@@ -129,10 +129,67 @@ h2 { color:var(--main-color); font-size:1.4rem; margin-bottom:14px; text-transfo
 .education-card h3 { color:var(--main-color); margin-bottom:6px; font-weight:600; }
 
 /* ===================== Contact form ===================== */
-form { max-width:800px; margin:0 auto; }
-.form-row { display:flex; gap:10px; margin-bottom:10px; }
-.form-row input, textarea { flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color:#fff; font-family:'Poppins', sans-serif; }
-.form-actions { text-align:right; margin-top:8px; }
+/* ===================== Contact Form - Large ===================== */
+form { 
+  max-width:1000px;  /* زودنا الحجم */
+  margin:0 auto; 
+  padding:24px;      /* padding داخلي أكبر */
+  background: rgba(255,255,255,0.05); /* subtle glass effect */
+  border-radius:16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+}
+
+.form-row { 
+  display:flex; 
+  gap:16px;  /* مسافة أكبر بين الحقول */
+  margin-bottom:16px; 
+  flex-wrap:wrap; /* لتكون responsive */
+}
+
+.form-row input, textarea { 
+  flex:1; 
+  padding:16px; /* أكبر padding */
+  border-radius:12px; 
+  border:1px solid rgba(255,255,255,0.08); 
+  background: rgba(255,255,255,0.03); 
+  color:#fff; 
+  font-family:'Poppins', sans-serif; 
+  font-size:1rem; /* أكبر حجم نص */
+  transition: all .3s ease;
+}
+
+.form-row input:focus, textarea:focus {
+  outline:none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 10px rgba(30,144,255,0.4);
+  background: rgba(255,255,255,0.05);
+}
+
+textarea { min-height:120px; } /* مساحة أكبر للنص */
+
+.form-actions { 
+  text-align:right; 
+  margin-top:16px; 
+}
+
+.form-actions button { 
+  padding:12px 24px; 
+  font-size:1rem; 
+  border-radius:8px; 
+  border:none; 
+  background: var(--main-color); 
+  color:#fff; 
+  cursor:pointer; 
+  transition: all .3s ease;
+}
+
+.form-actions button:hover { 
+  background: #0f75d1; 
+  box-shadow: 0 6px 20px rgba(30,144,255,0.4); 
+  transform: translateY(-2px);
+}
+
 
 /* ===================== Links ===================== */
 a { color:var(--main-color); text-decoration:none; font-family:'Poppins', sans-serif; }
