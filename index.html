@@ -8,189 +8,19 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="images/heizenbe5_favicon.ico">
 
-  <!-- Font Awesome & DevIcons & Octicons -->
+  <!-- Font Awesome & DevIcons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@primer/octicons@16.1.1/build.css">
 
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
   <style>
-  /* ===================== Variables ===================== */
-  :root{
-    --main-color: #1e90ff;
-    --text: #fff;
-    --card-bg: rgba(0,0,0,0.45);
-    --glass: rgba(255,255,255,0.03);
-    --shadow-color: rgba(0,0,0,0.35);
-  }
-
-  /* ===================== Reset ===================== */
-  * { box-sizing: border-box; margin: 0; padding: 0; text-decoration: none; }
-  html,body { height: 100%; }
-  body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text);
-    background: transparent;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth;
-  }
-
-  /* ===================== Background Video ===================== */
-  #bg-video{
-    position: fixed; inset:0;
-    width:100vw; height:100vh;
-    object-fit:cover; z-index:-1;
-    filter: brightness(0.35);
-  }
-
-  /* ===================== Header ===================== */
-  header{
-    position: sticky; top:0; z-index:50;
-    background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(6px);
-    padding:16px 14px;
-    text-align:center;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  header h1{ 
-    color:var(--main-color); 
-    font-size:2rem; 
-    font-weight: 700;
-  }
-  .subtitle{ 
-    color:#ddd; 
-    margin-top:4px; 
-    font-size:0.95rem; 
-  }
-  header nav{ 
-    margin-top:8px; 
-  }
-  header nav a{ 
-    margin:0 10px; 
-    color:#fff; 
-    font-weight:600; 
-    transition: color .2s; 
-  }
-  header nav a:hover{ color:var(--main-color); }
-
-  /* ===================== Container & Cards ===================== */
-  .container{ max-width:1100px; margin:28px auto; padding:0 16px; }
-  .card{
-    background: var(--card-bg);
-    border-radius:12px;
-    padding:28px;
-    margin-bottom:22px;
-    box-shadow: 0 6px 28px var(--shadow-color);
-    backdrop-filter: blur(6px);
-    opacity: 0;
-    transform: translateY(30px) scale(0.995);
-    transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1);
-  }
-  .card.visible{
-    opacity:1;
-    transform: translateY(0) scale(1);
-  }
-
-  h2{ 
-    color:var(--main-color); 
-    font-size:1.4rem; 
-    margin-bottom:14px; 
-    text-transform:uppercase; 
-    letter-spacing:1px; 
-    text-align:center;
-    font-weight:700;
-  }
-
-  /* ===================== Buttons ===================== */
-  .btn{ 
-    display:inline-block; 
-    padding:10px 16px; 
-    border-radius:6px; 
-    border:1px solid var(--main-color); 
-    color:var(--main-color); 
-    background:transparent; 
-    font-weight:600; 
-    transition: all .2s ease; 
-  }
-  .btn:hover{ 
-    background:var(--main-color); 
-    color:#fff; 
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 20px rgba(30,144,255,0.25); 
-  }
-
-  /* ===================== Services ===================== */
-  .services-container{ display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:10px; }
-  .service-card{
-    width:220px; border-radius:12px; overflow:hidden; background:var(--glass); text-align:center;
-    box-shadow: 0 6px 18px var(--shadow-color); transition: transform .28s ease, box-shadow .28s ease;
-    backdrop-filter: blur(6px);
-  }
-  .service-card:hover{ transform: translateY(-10px) scale(1.02); box-shadow: 0 14px 40px rgba(0,0,0,0.6); }
-  .service-media{ width:100%; height:120px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg, rgba(0,0,0,0.12), transparent); }
-  .service-media img{ width:100%; height:100%; object-fit:cover; transition: transform .5s ease; }
-  .service-card:hover .service-media img{ transform: scale(1.06) rotate(-1deg); }
-  .service-card h3{ color:var(--main-color); margin:12px 8px 6px; font-weight:600; }
-  .service-card p{ color:#ddd; padding:0 10px 14px; font-size:0.9rem; }
-
-  /* ===================== Projects ===================== */
-  .projects-container{ display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:12px; }
-  .project-card{
-    width:280px; border-radius:10px; overflow:hidden; background:rgba(0,0,0,0.34); 
-    box-shadow: 0 6px 18px var(--shadow-color);
-    transition: transform .28s ease, box-shadow .28s ease;
-    backdrop-filter: blur(6px);
-  }
-  .project-card:hover{ transform: translateY(-8px) scale(1.02); box-shadow: 0 14px 40px rgba(0,0,0,0.6); }
-  .project-card img{ width:100%; height:160px; object-fit:cover; transition: transform .45s ease; display:block; }
-  .project-card:hover img{ transform: scale(1.06); }
-  .project-body{ padding:12px; }
-  .project-body h3{ color:var(--main-color); margin-bottom:6px; font-weight:600; }
-  .project-body p{ color:#ddd; font-size:0.95rem; margin-bottom:10px; }
-
-  /* ===================== Skills ===================== */
-  .skills-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap:12px; margin-top:12px;
-  }
-  .skill-item{
-    background: rgba(255,255,255,0.03); border-radius:10px; padding:12px; text-align:center; transition: transform .2s, box-shadow .2s;
-    backdrop-filter: blur(6px);
-  }
-  .skill-item:hover{ transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.55); }
-  .skill-item i{ font-size:1.8rem; color:var(--main-color); margin-bottom:8px; display:block; }
-
-  /* ===================== Education ===================== */
-  .education-container{ display:flex; flex-direction:column; gap:12px; margin-top:8px; }
-  .education-card{ padding:12px; border-left:4px solid var(--main-color); background: rgba(0,0,0,0.22); border-radius:8px; }
-  .education-card h3{ color:var(--main-color); margin-bottom:6px; font-weight:600; }
-
-  /* ===================== Contact form ===================== */
-  form { max-width:800px; margin:0 auto; }
-  .form-row{ display:flex; gap:10px; margin-bottom:10px; }
-  .form-row input{ flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color:#fff; }
-  textarea{ width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color:#fff; }
-  .form-actions{ text-align:right; margin-top:8px; }
-
-  /* ===================== Footer ===================== */
-  footer{ text-align:center; padding:18px; color:#aaa; margin-top:14px; }
-
-  /* ===================== Fade-up animation ===================== */
-  .fade-up { will-change: transform, opacity; opacity: 0; transform: translateY(30px) scale(.995); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1); }
-  .fade-up.visible { opacity: 1; transform: translateY(0) scale(1); }
-
-  /* ===================== Responsive ===================== */
-  @media (max-width:900px){
-    .form-row{ flex-direction:column; }
-    header nav{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:8px; }
-    .project-card{ width:100%; max-width:520px; }
-    .service-card{ width:100%; max-width:320px; }
-  }
+    /* إزالة الـ underline من الروابط */
+    a { text-decoration: none; }
   </style>
 </head>
-
 <body>
   <!-- Background Video -->
   <video autoplay muted loop playsinline id="bg-video">
@@ -198,6 +28,7 @@
     Your browser does not support the video tag.
   </video>
 
+  <!-- Header -->
   <header>
     <h1>Ahmed Ayad</h1>
     <p class="subtitle">Software Engineer • Backend & Cloud (ASP.NET Core, Flask)</p>
@@ -215,7 +46,9 @@
     <!-- About -->
     <section id="about" class="card fade-up">
       <h2>About Me</h2>
-      <p>Experienced Software Engineer who transforms complex challenges into clean, efficient, and scalable solutions...</p>
+      <p>
+        Experienced Software Engineer who transforms complex challenges into clean, efficient, and scalable software solutions that deliver measurable business results. Focused on backend development, with expertise in designing, coding, and deploying applications that address real-world problems. Brings strong hands-on experience in .NET, C#, ASP.NET Core, Java, Python, SQL Server, MySQL, and AWS, with a proven ability to build RESTful APIs, secure architectures, and high-performance systems. Skilled at optimizing workflows, streamlining processes, and delivering solutions that empower startups and enterprises with a competitive edge. Recognized for selecting the right architectures, tools, and technologies that drive smarter decisions, unlock opportunities, and enable projects to scale efficiently.
+      </p>
       <a href="#contact" class="btn">Get In Touch</a>
     </section>
 
@@ -223,10 +56,34 @@
     <section id="services" class="card fade-up">
       <h2>Services</h2>
       <div class="services-container">
-        <div class="service-card"><div class="service-media"><img src="images/backend.png"></div><h3>Backend Development</h3><p>REST APIs, authentication, DB design.</p></div>
-        <div class="service-card"><div class="service-media"><img src="images/api.png"></div><h3>API Design & Integration</h3><p>OpenAPI, third-party integration.</p></div>
-        <div class="service-card"><div class="service-media"><img src="images/deploy-projects.png"></div><h3>Deployment & DevOps</h3><p>Docker, CI/CD, AWS deployments.</p></div>
-        <div class="service-card"><div class="service-media"><img src="images/codereview.png"></div><h3>Code Reviews & Mentoring</h3><p>Clean code, performance improvement.</p></div>
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/backend.png" alt="Backend Development">
+          </div>
+          <h3>Backend Development</h3>
+          <p>REST APIs, authentication, and database design (ASP.NET Core, Flask).</p>
+        </div>
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/api.png" alt="API Design">
+          </div>
+          <h3>API Design & Integration</h3>
+          <p>API contracts, OpenAPI docs, third-party integrations and testing.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/deploy-projects.png" alt="DevOps">
+          </div>
+          <h3>Deployment & DevOps</h3>
+          <p>Docker, CI/CD pipelines, infra as code, and AWS deployments.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/codereview.png" alt="Code Review">
+          </div>
+          <h3>Code Reviews & Mentoring</h3>
+          <p>Architecture reviews, clean code, performance improvements.</p>
+        </div>
       </div>
     </section>
 
@@ -234,20 +91,134 @@
     <section id="projects" class="card fade-up">
       <h2>Projects</h2>
       <div class="projects-container">
-        <!-- Add project cards as before -->
+        <div class="project-card">
+          <img src="images/emp.jpeg" alt="Employees Department API" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>Employees Department API</h3>
+            <p>API to manage employees and departments with CRUD operations.</p>
+            <a class="btn" href="https://github.com/a7med3yad/Employees-DepartmentApi" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/car.jpeg" alt="Car Agencies API" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>Car Agencies API</h3>
+            <p>REST API for managing car agencies, inventory and sales.</p>
+            <a class="btn" href="https://github.com/a7med3yad/Car-Agencies-API" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/bookmark.jpeg" alt="BookMarks" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>BookMarks</h3>
+            <p>Bookmark manager app with categorization and search features.</p>
+            <a class="btn" href="https://github.com/a7med3yad/BookMarks" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/restapi.jpg" alt="RestFull API Using Database First" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>RestFull API (Database-First)</h3>
+            <p>API built using database-first approach and EF mappings.</p>
+            <a class="btn" href="https://github.com/a7med3yad/RestFull-API-Using-Data-base-First" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/smartmentor.jpeg" alt="SmartRoomMentor" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>SmartRoomMentor</h3>
+            <p>Smart classroom assistant app for mentoring and resource sharing.</p>
+            <a class="btn" href="https://github.com/a7med3yad/SmartRoomMentor" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/cloudapp.jpeg" alt="CloudComputingApp" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>CloudComputingApp</h3>
+            <p>Cloud-based app demonstrating basic cloud services and deployment.</p>
+            <a class="btn" href="https://github.com/a7med3yad/CloudComputingApp" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/university.jpeg" alt="University Management System" onerror="this.src='images/placeholder.png'"/>
+          <div class="project-body">
+            <h3>University Management System</h3>
+            <p>System for managing students, courses and academic processes.</p>
+            <a class="btn" href="https://github.com/a7med3yad/University_Managment_System" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="card fade-up">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C# / .NET</p></div>
+        <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python / Flask</p></div>
+        <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><p>Node.js (APIs)</p></div>
+        <div class="skill-item"><i class="devicon-mysql-plain-wordmark colored"></i><p>MySQL</p></div>
+        <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><p>PostgreSQL</p></div>
+        <div class="skill-item"><i class="devicon-microsoftsqlserver-line-wordmark colored"></i><p>SQL Server</p></div>
+        <div class="skill-item"><i class="devicon-react-original colored"></i><p>React</p></div>
+        <div class="skill-item"><i class="devicon-html5-plain-wordmark colored"></i><p>HTML</p></div>
+        <div class="skill-item"><i class="devicon-css3-plain-wordmark colored"></i><p>CSS</p></div>
+        <div class="skill-item"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
+        <div class="skill-item"><i class="devicon-aws-plain colored"></i><p>AWS</p></div>
+        <div class="skill-item"><i class="devicon-linux-plain colored"></i><p>Linux</p></div>
+        <div class="skill-item"><i class="devicon-git-plain-wordmark colored"></i><p>Git & GitHub</p></div>
+        <div class="skill-item"><i class="fa fa-lock colored"></i><p>Security Basics (JWT)</p></div>
+        <div class="skill-item"><i class="fa fa-chart-line colored"></i><p>Monitoring & Logging</p></div>
+        <div class="skill-item"><i class="fa fa-project-diagram colored"></i><p>Clean Architecture</p></div>
+        <div class="skill-item"><i class="fa fa-users colored"></i><p>Code Reviews & Mentoring</p></div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="card fade-up">
+      <h2>Education</h2>
+      <div class="education-container">
+        <div class="education-card">
+          <h3>Alexandria University – Faculty of Data Science</h3>
+          <p>Bachelor’s in Computer and Data Science (2022 – 2026)</p>
+        </div>
+        <div class="education-card">
+          <h3>DEPI – Digital Egypt Pioneers Initiative</h3>
+          <p>Trainee (2025)</p>
+        </div>
+        <div class="education-card">
+          <h3>Alexandria Petroleum Company</h3>
+          <p>Software Engineering Trainee – AI & Flask backend (Summer 2025)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card fade-up">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+        <p id="form-status" style="margin-top:12px;color:#ddd;"></p>
+      </form>
+      <p style="margin-top:18px;">Or contact directly:</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmed-ayad-1000b52ab/" target="_blank">linkedin.com/in/ahmed-ayad</a></p>
     </section>
   </main>
 
   <footer>&copy; 2025 Ahmed Ayad. All rights reserved.</footer>
 
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
   <script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target);}
-    });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
-</body>
-</html>
+    // Fade-up animation
+    const
