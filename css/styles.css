@@ -54,11 +54,68 @@ h2 { color:var(--main-color); font-size:1.4rem; margin-bottom:14px; text-transfo
 .service-card p { color:#ddd; padding:0 10px 14px; font-size:0.9rem; font-family: 'Poppins', sans-serif; }
 
 /* ===================== Projects ===================== */
-.projects-container { display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:12px; }
-.project-card { width:280px; border-radius:10px; overflow:hidden; background:rgba(0,0,0,0.34); box-shadow: 0 6px 18px var(--shadow-color); backdrop-filter: blur(6px); }
-.project-body { padding:12px; }
-.project-body h3 { color:var(--main-color); margin-bottom:6px; font-weight:600; font-family: 'Poppins', sans-serif; }
-.project-body p { color:#ddd; font-size:0.95rem; margin-bottom:10px; font-family: 'Poppins', sans-serif; }
+/* ===================== Projects ===================== */
+.projects-container { 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:20px; 
+  justify-content:center; 
+  margin-top:20px; 
+}
+
+.project-card { 
+  width:280px; 
+  border-radius:16px; 
+  overflow:hidden; 
+  background: rgba(255,255,255,0.05); /* lighter glass effect */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5); 
+  backdrop-filter: blur(8px); 
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease, background .3s ease;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.project-card:hover { 
+  transform: translateY(-15px) scale(1.04); 
+  box-shadow: 0 20px 60px rgba(30,144,255,0.45); 
+  background: rgba(255,255,255,0.08);
+}
+
+.project-card img { 
+  width:100%; 
+  height:180px; 
+  object-fit:cover; 
+  transition: transform .7s ease, filter .5s ease; 
+  border-radius:16px 16px 0 0; 
+  display:block; 
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.project-card:hover img { 
+  transform: scale(1.15) rotate(-2deg); 
+  filter: brightness(1.05) contrast(1.15);
+  box-shadow: 0 12px 30px rgba(30,144,255,0.35);
+}
+
+.project-body { 
+  padding:16px; 
+  text-align:center; 
+}
+
+.project-body h3 { 
+  color:var(--main-color); 
+  margin-bottom:8px; 
+  font-weight:700; 
+  font-family:'Poppins', sans-serif;
+  font-size:1.2rem;
+}
+
+.project-body p { 
+  color:#ddd; 
+  font-size:0.95rem; 
+  line-height:1.5; 
+  font-family:'Poppins', sans-serif;
+}
+
 
 /* ===================== Skills ===================== */
 .skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap:12px; margin-top:12px; }
