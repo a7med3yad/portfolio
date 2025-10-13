@@ -11,16 +11,18 @@
   <!-- Font Awesome & DevIcons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@primer/octicons@16.1.1/build.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     /* إزالة الـ underline من الروابط */
-    a { text-decoration: none; }
+    a {
+      text-decoration: none;
+    }
   </style>
 </head>
+
 <body>
   <!-- Background Video -->
   <video autoplay muted loop playsinline id="bg-video">
@@ -47,7 +49,8 @@
     <section id="about" class="card fade-up">
       <h2>About Me</h2>
       <p>
-        Experienced Software Engineer who transforms complex challenges into clean, efficient, and scalable software solutions that deliver measurable business results. Focused on backend development, with expertise in designing, coding, and deploying applications that address real-world problems. Brings strong hands-on experience in .NET, C#, ASP.NET Core, Java, Python, SQL Server, MySQL, and AWS, with a proven ability to build RESTful APIs, secure architectures, and high-performance systems. Skilled at optimizing workflows, streamlining processes, and delivering solutions that empower startups and enterprises with a competitive edge. Recognized for selecting the right architectures, tools, and technologies that drive smarter decisions, unlock opportunities, and enable projects to scale efficiently.
+        I'm a Software Engineer specialized in backend development, RESTful APIs, and cloud deployment.
+        I work mainly with ASP.NET Core, Flask, and SQL databases, focusing on scalable, maintainable architectures.
       </p>
       <a href="#contact" class="btn">Get In Touch</a>
     </section>
@@ -58,28 +61,39 @@
       <div class="services-container">
         <div class="service-card">
           <div class="service-media">
-            <img src="images/backend.png" alt="Backend Development">
+            <img src="images/backend.jpg" alt="Backend Development">
           </div>
           <h3>Backend Development</h3>
           <p>REST APIs, authentication, and database design (ASP.NET Core, Flask).</p>
         </div>
+
         <div class="service-card">
           <div class="service-media">
-            <img src="images/api.png" alt="API Design">
+            <img src="images/api.jpg" alt="API Design">
           </div>
           <h3>API Design & Integration</h3>
           <p>API contracts, OpenAPI docs, third-party integrations and testing.</p>
         </div>
+
         <div class="service-card">
           <div class="service-media">
-            <img src="images/deploy-projects.png" alt="DevOps">
+            <img src="images/devops.jpg" alt="DevOps">
           </div>
           <h3>Deployment & DevOps</h3>
           <p>Docker, CI/CD pipelines, infra as code, and AWS deployments.</p>
         </div>
+
         <div class="service-card">
           <div class="service-media">
-            <img src="images/codereview.png" alt="Code Review">
+            <img src="images/frontend.jpg" alt="Frontend Integration">
+          </div>
+          <h3>Frontend Integration</h3>
+          <p>Connect React or simple UIs to scalable backend services.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-media">
+            <img src="images/review.jpg" alt="Code Review">
           </div>
           <h3>Code Reviews & Mentoring</h3>
           <p>Architecture reviews, clean code, performance improvements.</p>
@@ -92,55 +106,61 @@
       <h2>Projects</h2>
       <div class="projects-container">
         <div class="project-card">
-          <img src="images/emp.jpeg" alt="Employees Department API" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project1.jpg" alt="Employees Department API" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>Employees Department API</h3>
             <p>API to manage employees and departments with CRUD operations.</p>
             <a class="btn" href="https://github.com/a7med3yad/Employees-DepartmentApi" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
+
         <div class="project-card">
-          <img src="images/car.jpeg" alt="Car Agencies API" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project2.jpg" alt="Car Agencies API" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>Car Agencies API</h3>
             <p>REST API for managing car agencies, inventory and sales.</p>
             <a class="btn" href="https://github.com/a7med3yad/Car-Agencies-API" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
+
         <div class="project-card">
-          <img src="images/bookmark.jpeg" alt="BookMarks" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project3.jpg" alt="BookMarks" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>BookMarks</h3>
             <p>Bookmark manager app with categorization and search features.</p>
             <a class="btn" href="https://github.com/a7med3yad/BookMarks" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
+
         <div class="project-card">
-          <img src="images/restapi.jpg" alt="RestFull API Using Database First" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project4.jpg" alt="RestFull API Using Database First" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>RestFull API (Database-First)</h3>
             <p>API built using database-first approach and EF mappings.</p>
             <a class="btn" href="https://github.com/a7med3yad/RestFull-API-Using-Data-base-First" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
+
         <div class="project-card">
-          <img src="images/smartmentor.jpeg" alt="SmartRoomMentor" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project5.jpg" alt="SmartRoomMentor" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>SmartRoomMentor</h3>
             <p>Smart classroom assistant app for mentoring and resource sharing.</p>
             <a class="btn" href="https://github.com/a7med3yad/SmartRoomMentor" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
+
         <div class="project-card">
-          <img src="images/cloudapp.jpeg" alt="CloudComputingApp" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project6.jpg" alt="CloudComputingApp" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>CloudComputingApp</h3>
             <p>Cloud-based app demonstrating basic cloud services and deployment.</p>
             <a class="btn" href="https://github.com/a7med3yad/CloudComputingApp" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
+
         <div class="project-card">
-          <img src="images/university.jpeg" alt="University Management System" onerror="this.src='images/placeholder.png'"/>
+          <img src="images/project7.jpg" alt="University Management System" onerror="this.src='images/placeholder.png'"/>
           <div class="project-body">
             <h3>University Management System</h3>
             <p>System for managing students, courses and academic processes.</p>
@@ -207,6 +227,7 @@
         </div>
         <p id="form-status" style="margin-top:12px;color:#ddd;"></p>
       </form>
+
       <p style="margin-top:18px;">Or contact directly:</p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:ahmed.ibrahim01974@gmail.com">ahmed.ibrahim01974@gmail.com</a></p>
       <p><i class="fab fa-github"></i> <a href="https://github.com/a7med3yad" target="_blank">github.com/a7med3yad</a></p>
@@ -221,4 +242,32 @@
 
   <script>
     // Fade-up animation
-    const
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Contact Form
+    const EMAILJS_USER_ID = '';
+    const SERVICE_ID = '';
+    const TEMPLATE_ID = '';
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      formStatus.textContent = 'Opening mail client...';
+      window.location.href = `mailto:ahmed.ibrahim01974@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' <' + email + '>')}`;
+    });
+  </script>
+</body>
+</html>
