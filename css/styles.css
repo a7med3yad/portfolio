@@ -24,6 +24,7 @@ html, body {
   line-height: 1.6;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ===================== Background Video ===================== */
@@ -35,6 +36,12 @@ html, body {
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.35);
+  transform: scale(1.05);
+  animation: bgZoom 20s ease-in-out infinite alternate;
+}
+@keyframes bgZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.07); }
 }
 
 /* ===================== Header ===================== */
@@ -47,31 +54,42 @@ header {
   padding: 16px 14px;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  animation: fadeSlideDown 1s ease forwards;
+}
+@keyframes fadeSlideDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 header h1 {
   color: var(--main-color);
   font-size: 2rem;
   font-weight: 700;
   font-family: "Fjalla One", "Nunito", sans-serif;
+  letter-spacing: 1px;
+  transition: color .3s ease, text-shadow .3s ease;
+}
+header h1:hover {
+  text-shadow: 0 0 10px var(--main-color);
 }
 .subtitle {
   color: #ddd;
   margin-top: 4px;
   font-size: 0.95rem;
-  font-family: "Nunito", sans-serif;
 }
 header nav {
   margin-top: 8px;
+  animation: fadeUp 1.2s ease forwards;
 }
 header nav a {
   margin: 0 10px;
   color: #fff;
   font-weight: 600;
-  transition: color .2s;
-  font-family: "Nunito", sans-serif;
+  transition: all .25s ease;
 }
 header nav a:hover {
   color: var(--main-color);
+  text-shadow: 0 0 12px var(--main-color);
+  transform: translateY(-2px);
 }
 
 /* ===================== Container & Cards ===================== */
@@ -88,12 +106,17 @@ header nav a:hover {
   box-shadow: 0 6px 28px var(--shadow-color);
   backdrop-filter: blur(6px);
   opacity: 0;
-  transform: translateY(30px) scale(0.995);
-  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .9, .2, 1);
+  transform: translateY(40px) scale(0.97);
+  transition: opacity .8s ease, transform .8s cubic-bezier(.19,1,.22,1);
 }
 .card.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+  animation: glowCard 2s ease-in-out infinite alternate;
+}
+@keyframes glowCard {
+  0% { box-shadow: 0 0 18px rgba(30,144,255,0.25); }
+  100% { box-shadow: 0 0 35px rgba(30,144,255,0.5); }
 }
 
 /* ===================== Card Image Animation ===================== */
@@ -106,36 +129,17 @@ header nav a:hover {
 }
 .service-card:hover img, .project-card:hover img {
   transform: scale(1.12) rotate(-2deg);
-  filter: brightness(1.05) contrast(1.1);
+  filter: brightness(1.1) contrast(1.15);
   box-shadow: 0 20px 40px rgba(30, 144, 255, 0.35);
 }
-.service-card, .project-card {
-  transition: transform .5s cubic-bezier(.2, .8, .2, 1), box-shadow .5s ease;
-}
-.service-card:hover, .project-card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55);
-}
 
-/* Floating animation */
+/* ===================== Floating & Entrance Animation ===================== */
 @keyframes floatCard {
   0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-4px) scale(1.01); }
+  50% { transform: translateY(-6px) scale(1.01); }
 }
 .service-card img, .project-card img {
   animation: floatCard 6s ease-in-out infinite;
-}
-
-/* ===================== Headings ===================== */
-h2 {
-  color: var(--main-color);
-  font-size: 1.4rem;
-  margin-bottom: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  font-weight: 700;
-  font-family: "Fjalla One", "Nunito", sans-serif;
 }
 
 /* ===================== Buttons ===================== */
@@ -147,247 +151,52 @@ h2 {
   color: var(--main-color);
   background: transparent;
   font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  transition: all .2s ease;
+  transition: all .3s cubic-bezier(.19,1,.22,1);
 }
 .btn:hover {
   background: var(--main-color);
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.25);
-}
-
-/* ===================== Services ===================== */
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
-  margin-top: 10px;
-}
-.service-card {
-  width: 220px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--glass);
-  text-align: center;
-  box-shadow: 0 6px 18px var(--shadow-color);
-  backdrop-filter: blur(6px);
-}
-.service-media {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, rgba(0,0,0,0.12), transparent);
-}
-.service-card h3 {
-  color: var(--main-color);
-  margin: 12px 8px 6px;
-  font-weight: 600;
-  font-family: "Fjalla One", "Nunito", sans-serif;
-}
-.service-card p {
-  color: #ddd;
-  padding: 0 10px 14px;
-  font-size: 0.9rem;
-  font-family: "Nunito", sans-serif;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(30,144,255,0.45);
 }
 
 /* ===================== Projects ===================== */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-}
 .project-card {
-  width: 280px;
-  border-radius: 16px;
+  position: relative;
   overflow: hidden;
-  background: rgba(255,255,255,0.05);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease, background .3s ease;
-  border: 1px solid rgba(255,255,255,0.08);
 }
-.project-card:hover {
-  transform: translateY(-15px) scale(1.04);
-  box-shadow: 0 20px 60px rgba(30,144,255,0.45);
-  background: rgba(255,255,255,0.08);
-}
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  transition: transform .7s ease, filter .5s ease;
-  border-radius: 16px 16px 0 0;
-  display: block;
-  animation: floatCard 6s ease-in-out infinite;
-}
-.project-card:hover img {
-  transform: scale(1.15) rotate(-2deg);
-  filter: brightness(1.05) contrast(1.15);
-  box-shadow: 0 12px 30px rgba(30,144,255,0.35);
-}
-.project-body {
-  padding: 16px;
-  text-align: center;
-}
-.project-body h3 {
-  color: var(--main-color);
-  margin-bottom: 8px;
-  font-weight: 700;
-  font-family: "Fjalla One", "Nunito", sans-serif;
-  font-size: 1.2rem;
-}
-.project-body p {
-  color: #ddd;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  font-family: "Nunito", sans-serif;
-}
-
-/* ===================== Skills ===================== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
-  gap: 12px;
-  margin-top: 12px;
-}
-.skill-item {
-  background: rgba(255,255,255,0.03);
-  border-radius: 10px;
-  padding: 12px;
-  text-align: center;
-  backdrop-filter: blur(6px);
-  transition: transform .2s, box-shadow .2s;
-  font-family: "Nunito", sans-serif;
-}
-.skill-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.55);
-}
-.skill-item i {
-  font-size: 1.8rem;
-  color: var(--main-color);
-  margin-bottom: 8px;
-  display: block;
-}
-
-/* ===================== Education ===================== */
-.education-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 8px;
-}
-.education-card {
-  padding: 12px;
-  border-left: 4px solid var(--main-color);
-  background: rgba(0,0,0,0.22);
-  border-radius: 8px;
-}
-.education-card h3 {
-  color: var(--main-color);
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-family: "Fjalla One", "Nunito", sans-serif;
-}
-
-/* ===================== Contact Form ===================== */
-form {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 24px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-}
-.form-row {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-.form-row input, textarea {
-  flex: 1;
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.03);
-  color: #fff;
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-  transition: all .3s ease;
-}
-.form-row input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--main-color);
-  box-shadow: 0 0 10px rgba(30,144,255,0.4);
-  background: rgba(255,255,255,0.05);
-}
-textarea { min-height: 120px; }
-.form-actions {
-  text-align: right;
-  margin-top: 16px;
-}
-.form-actions button {
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: none;
-  background: var(--main-color);
-  color: #fff;
-  cursor: pointer;
-  font-family: "Nunito", sans-serif;
-  transition: all .3s ease;
-}
-.form-actions button:hover {
-  background: #0f75d1;
-  box-shadow: 0 6px 20px rgba(30,144,255,0.4);
-  transform: translateY(-2px);
-}
-
-/* ===================== Links ===================== */
-a {
-  color: var(--main-color);
-  text-decoration: none;
-  font-family: "Nunito", sans-serif;
-}
-a.plain-link { color: #ddd; text-decoration: none; }
-a:hover { color: #fff; }
-
-/* ===================== Footer ===================== */
-.note, footer {
-  font-family: "Nunito", sans-serif;
-}
-.note {
-  margin-top: 18px;
-  font-size: 0.95rem;
-  color: #ddd;
-  text-align: center;
-}
-footer {
-  text-align: center;
-  padding: 18px;
-  color: #aaa;
-  margin-top: 14px;
-}
-
-/* ===================== Fade-up animation ===================== */
-.fade-up {
-  will-change: transform, opacity;
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(30,144,255,0.25), transparent 60%);
   opacity: 0;
-  transform: translateY(30px) scale(.995);
-  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1);
+  transition: opacity .6s ease;
+}
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* ===================== Fade-up + Smooth reveal ===================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity .8s ease, transform 1s cubic-bezier(.2,.8,.2,1);
 }
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+/* ===================== Scroll Reveal Glow ===================== */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(30,144,255,0.2); }
+  50% { box-shadow: 0 0 30px rgba(30,144,255,0.45); }
+}
+.visible h3, 
+.visible h2, 
+.visible p {
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 /* ===================== Responsive ===================== */
