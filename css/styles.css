@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito:wght@400;500;600;700&display=swap');
 
 :root {
-  --main-color: #00bcd4; /* turquoise calm tone */
-  --accent-color: #5ee7df; /* subtle gradient tone */
-  --text: #f5f5f5;
-  --card-bg: rgba(20, 20, 20, 0.55);
-  --glass: rgba(255, 255, 255, 0.03);
-  --shadow-color: rgba(0, 0, 0, 0.4);
+  --main-color: #6ec6ff;         /* أزرق سماوي هادئ */
+  --accent-color: #a8e6cf;       /* أخضر نعناعي مريح */
+  --text: #e0f7fa;               /* رمادي فاتح مائل للأزرق */
+  --card-bg: rgba(20, 20, 20, 0.5);
+  --glass: rgba(255, 255, 255, 0.04);
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* ===================== Reset ===================== */
@@ -22,7 +22,7 @@ html, body {
   height: 100%;
   font-family: "Nunito", sans-serif;
   color: var(--text);
-  background: #000;
+  background: transparent;
   line-height: 1.6;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -52,7 +52,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(6px);
   padding: 16px 14px;
   text-align: center;
@@ -75,11 +75,11 @@ header h1 {
 }
 
 header h1:hover {
-  text-shadow: 0 0 10px var(--accent-color);
+  text-shadow: 0 0 10px var(--main-color);
 }
 
 .subtitle {
-  color: #bbb;
+  color: #ddd;
   margin-top: 4px;
   font-size: 0.95rem;
 }
@@ -91,7 +91,7 @@ header nav {
 
 header nav a {
   margin: 0 10px;
-  color: #f0f0f0;
+  color: var(--text);
   font-weight: 600;
   transition: all .25s ease;
 }
@@ -111,11 +111,11 @@ header nav a:hover {
 
 .card {
   background: var(--card-bg);
-  border-radius: 14px;
-  padding: 28px 24px;
+  border-radius: 12px;
+  padding: 26px 24px;
   margin-bottom: 28px;
-  box-shadow: 0 6px 30px var(--shadow-color);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 28px var(--shadow-color);
+  backdrop-filter: blur(6px);
   opacity: 0;
   transform: translateY(40px) scale(0.97);
   transition: opacity .8s ease, transform .8s cubic-bezier(.19,1,.22,1);
@@ -129,125 +129,96 @@ header nav a:hover {
 /* ===================== Services ===================== */
 .services-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
 }
 
 .service-card {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 14px;
-  padding: 18px 14px;
+  border-radius: 10px;
+  padding: 14px 12px;
   text-align: center;
   transition: transform .3s ease, box-shadow .3s ease;
-  height: 250px;
+  height: 230px;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,188,212,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(168,230,207,0.35);
 }
 
 .service-card img {
   width: 100%;
   height: 120px;
-  margin-bottom: 12px;
-  border-radius: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
 .service-card h3 {
-  color: var(--accent-color);
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  font-family: "Fjalla One", "Nunito", sans-serif;
+  color: var(--main-color);
+  font-size: 1.05rem;
+  margin-bottom: 6px;
 }
 
 .service-card p {
-  font-size: 0.9rem;
-  color: #d5d5d5;
+  font-size: 0.85rem;
+  color: #ddd;
 }
 
-/* ===================== Contact ===================== */
-#contact {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 32px 24px;
-  border-radius: 16px;
-  box-shadow: 0 6px 25px rgba(0,188,212,0.25);
-  backdrop-filter: blur(10px);
-  text-align: center;
+/* ===================== Projects ===================== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 18px;
 }
 
-#contact h2 {
-  color: var(--accent-color);
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-}
-
-#contact p {
-  color: #cfcfcf;
-  margin-bottom: 18px;
-}
-
-#contact-form {
+.project-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
-#contact-form input,
-#contact-form textarea {
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(168,230,207,0.3);
+}
+
+.project-card img {
   width: 100%;
-  max-width: 500px;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(0,0,0,0.4);
-  color: #fff;
-  font-size: 0.95rem;
-  transition: border .3s ease, box-shadow .3s ease;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(94,231,223,0.3);
-  outline: none;
+.project-body {
+  padding: 14px 12px 18px;
 }
 
-#contact-form button {
-  margin-top: 12px;
+.project-body h3 {
+  color: var(--main-color);
+  font-size: 1.05rem;
+  margin-bottom: 6px;
 }
 
-#contact a {
-  color: var(--accent-color);
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-#contact a:hover {
-  color: #fff;
-  text-shadow: 0 0 8px var(--accent-color);
-}
-
-/* ===================== Education ===================== */
-.education-card.depi::after {
-  content: "🎓 DEPI Track: .NET Fullstack Development";
-  display: block;
-  margin-top: 8px;
-  color: var(--accent-color);
-  font-weight: 600;
-  font-size: 0.92rem;
+.project-body p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #ddd;
 }
 
 /* ===================== Buttons ===================== */
 .btn {
   display: inline-block;
   padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
+  border-radius: 6px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
   background: transparent;
   font-weight: 600;
   transition: all .3s cubic-bezier(.19,1,.22,1);
@@ -257,14 +228,55 @@ header nav a:hover {
   background: var(--accent-color);
   color: #000;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(94,231,223,0.45);
+  box-shadow: 0 10px 25px rgba(168,230,207,0.45);
+}
+
+/* ===================== Skills & Education ===================== */
+.skills-grid, .education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.skill-item {
+  background: rgba(255,255,255,0.05);
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.skill-item i {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.skill-item p {
+  font-size: 0.9rem;
+}
+
+.education-card {
+  background: rgba(255,255,255,0.05);
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* ===================== Fade-up ===================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity .8s ease, transform 1s cubic-bezier(.2,.8,.2,1);
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* ===================== Footer ===================== */
 footer {
   text-align: center;
   padding: 20px;
-  background: rgba(10,10,10,0.7);
+  background: rgba(0,0,0,0.7);
   font-size: 0.9rem;
   color: #bbb;
 }
@@ -285,3 +297,62 @@ footer {
     height: 140px;
   }
 }
+#contact {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px var(--shadow-color);
+  backdrop-filter: blur(6px);
+}
+
+#contact h2 {
+  color: var(--main-color);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.95rem;
+  resize: none;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+#contact-form button {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+#contact p {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+
+#contact a {
+  color: var(--main-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--main-color);
+}
+/* ===================== Contact =====================
