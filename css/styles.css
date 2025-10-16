@@ -1,214 +1,399 @@
 /* ===================== Variables & Font ===================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito:wght@400;500;600;700&display=swap');
 
-:root{
+:root {
   --main-color: #1e90ff;
   --text: #fff;
-  --card-bg: rgba(0,0,0,0.45);
-  --glass: rgba(255,255,255,0.03);
-  --shadow-color: rgba(0,0,0,0.35);
+  --card-bg: rgba(0, 0, 0, 0.45);
+  --glass: rgba(255, 255, 255, 0.03);
+  --shadow-color: rgba(0, 0, 0, 0.35);
 }
 
 /* ===================== Reset ===================== */
-* { box-sizing: border-box; margin: 0; padding: 0; text-decoration: none; }
-html, body { height: 100%; font-family: 'Poppins', sans-serif; color: var(--text); background: transparent; line-height: 1.6; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html, body {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  color: var(--text);
+  background: transparent;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
 
 /* ===================== Background Video ===================== */
-#bg-video { position: fixed; inset:0; width:100vw; height:100vh; object-fit:cover; z-index:-1; filter: brightness(0.35); }
+#bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.35);
+}
 
 /* ===================== Header ===================== */
-header { position: sticky; top:0; z-index:50; background: rgba(0,0,0,0.75); backdrop-filter: blur(6px); padding:16px 14px; text-align:center; border-bottom: 1px solid rgba(255,255,255,0.06); }
-header h1 { color:var(--main-color); font-size:2rem; font-weight:700; }
-.subtitle { color:#ddd; margin-top:4px; font-size:0.95rem; }
-header nav { margin-top:8px; }
-header nav a { margin:0 10px; color:#fff; font-weight:600; transition: color .2s; font-family: 'Poppins', sans-serif; }
-header nav a:hover { color:var(--main-color); }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 16px 14px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+header h1 {
+  color: var(--main-color);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Fjalla One", "Nunito", sans-serif;
+}
+.subtitle {
+  color: #ddd;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  font-family: "Nunito", sans-serif;
+}
+header nav {
+  margin-top: 8px;
+}
+header nav a {
+  margin: 0 10px;
+  color: #fff;
+  font-weight: 600;
+  transition: color .2s;
+  font-family: "Nunito", sans-serif;
+}
+header nav a:hover {
+  color: var(--main-color);
+}
 
 /* ===================== Container & Cards ===================== */
-.container { max-width:1100px; margin:28px auto; padding:0 16px; }
-.card { background: var(--card-bg); border-radius:12px; padding:28px; margin-bottom:22px; box-shadow: 0 6px 28px var(--shadow-color); backdrop-filter: blur(6px); opacity:0; transform:translateY(30px) scale(0.995); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1); }
-.card.visible { opacity:1; transform:translateY(0) scale(1); }
+.container {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 28px var(--shadow-color);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: translateY(30px) scale(0.995);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .9, .2, 1);
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
 
 /* ===================== Card Image Animation ===================== */
-.service-media img, .project-card img { width:100%; height:100%; object-fit:cover; border-radius:6px; transition: transform .7s ease, filter .7s ease, box-shadow .7s ease; }
-.service-card:hover img, .project-card:hover img { transform: scale(1.12) rotate(-2deg); filter: brightness(1.05) contrast(1.1); box-shadow: 0 20px 40px rgba(30,144,255,0.35); }
-.service-card, .project-card { transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease; }
-.service-card:hover, .project-card:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 16px 50px rgba(0,0,0,0.55); }
+.service-media img, .project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform .7s ease, filter .7s ease, box-shadow .7s ease;
+}
+.service-card:hover img, .project-card:hover img {
+  transform: scale(1.12) rotate(-2deg);
+  filter: brightness(1.05) contrast(1.1);
+  box-shadow: 0 20px 40px rgba(30, 144, 255, 0.35);
+}
+.service-card, .project-card {
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1), box-shadow .5s ease;
+}
+.service-card:hover, .project-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55);
+}
 
 /* Floating animation */
-@keyframes floatCard { 0%, 100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-4px) scale(1.01); } }
-.service-card img, .project-card img { animation: floatCard 6s ease-in-out infinite; }
-
-/* ===================== Headings ===================== */
-h2 { color:var(--main-color); font-size:1.4rem; margin-bottom:14px; text-transform:uppercase; letter-spacing:1px; text-align:center; font-weight:700; }
-
-/* ===================== Buttons ===================== */
-.btn { display:inline-block; padding:10px 16px; border-radius:6px; border:1px solid var(--main-color); color:var(--main-color); background:transparent; font-weight:600; font-family: 'Poppins', sans-serif; transition: all .2s ease; }
-.btn:hover { background:var(--main-color); color:#fff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(30,144,255,0.25); }
-
-/* ===================== Services ===================== */
-.services-container { display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:10px; }
-.service-card { width:220px; border-radius:12px; overflow:hidden; background:var(--glass); text-align:center; box-shadow: 0 6px 18px var(--shadow-color); backdrop-filter: blur(6px); }
-.service-media { width:100%; height:120px; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg, rgba(0,0,0,0.12), transparent); }
-.service-card h3 { color:var(--main-color); margin:12px 8px 6px; font-weight:600; font-family: 'Poppins', sans-serif; }
-.service-card p { color:#ddd; padding:0 10px 14px; font-size:0.9rem; font-family: 'Poppins', sans-serif; }
-
-/* ===================== Projects ===================== */
-/* ===================== Projects ===================== */
-.projects-container { 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:20px; 
-  justify-content:center; 
-  margin-top:20px; 
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-4px) scale(1.01); }
 }
-
-.project-card { 
-  width:280px; 
-  border-radius:16px; 
-  overflow:hidden; 
-  background: rgba(255,255,255,0.05); /* lighter glass effect */
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5); 
-  backdrop-filter: blur(8px); 
-  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease, background .3s ease;
-  border:1px solid rgba(255,255,255,0.08);
-}
-
-.project-card:hover { 
-  transform: translateY(-15px) scale(1.04); 
-  box-shadow: 0 20px 60px rgba(30,144,255,0.45); 
-  background: rgba(255,255,255,0.08);
-}
-
-.project-card img { 
-  width:100%; 
-  height:180px; 
-  object-fit:cover; 
-  transition: transform .7s ease, filter .5s ease; 
-  border-radius:16px 16px 0 0; 
-  display:block; 
+.service-card img, .project-card img {
   animation: floatCard 6s ease-in-out infinite;
 }
 
-.project-card:hover img { 
-  transform: scale(1.15) rotate(-2deg); 
+/* ===================== Headings ===================== */
+h2 {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Fjalla One", "Nunito", sans-serif;
+}
+
+/* ===================== Buttons ===================== */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background: transparent;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  transition: all .2s ease;
+}
+.btn:hover {
+  background: var(--main-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.25);
+}
+
+/* ===================== Services ===================== */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.service-card {
+  width: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--glass);
+  text-align: center;
+  box-shadow: 0 6px 18px var(--shadow-color);
+  backdrop-filter: blur(6px);
+}
+.service-media {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.12), transparent);
+}
+.service-card h3 {
+  color: var(--main-color);
+  margin: 12px 8px 6px;
+  font-weight: 600;
+  font-family: "Fjalla One", "Nunito", sans-serif;
+}
+.service-card p {
+  color: #ddd;
+  padding: 0 10px 14px;
+  font-size: 0.9rem;
+  font-family: "Nunito", sans-serif;
+}
+
+/* ===================== Projects ===================== */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.project-card {
+  width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease, background .3s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.project-card:hover {
+  transform: translateY(-15px) scale(1.04);
+  box-shadow: 0 20px 60px rgba(30,144,255,0.45);
+  background: rgba(255,255,255,0.08);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform .7s ease, filter .5s ease;
+  border-radius: 16px 16px 0 0;
+  display: block;
+  animation: floatCard 6s ease-in-out infinite;
+}
+.project-card:hover img {
+  transform: scale(1.15) rotate(-2deg);
   filter: brightness(1.05) contrast(1.15);
   box-shadow: 0 12px 30px rgba(30,144,255,0.35);
 }
-
-.project-body { 
-  padding:16px; 
-  text-align:center; 
+.project-body {
+  padding: 16px;
+  text-align: center;
 }
-
-.project-body h3 { 
-  color:var(--main-color); 
-  margin-bottom:8px; 
-  font-weight:700; 
-  font-family:'Poppins', sans-serif;
-  font-size:1.2rem;
+.project-body h3 {
+  color: var(--main-color);
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-family: "Fjalla One", "Nunito", sans-serif;
+  font-size: 1.2rem;
 }
-
-.project-body p { 
-  color:#ddd; 
-  font-size:0.95rem; 
-  line-height:1.5; 
-  font-family:'Poppins', sans-serif;
+.project-body p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
 }
-
 
 /* ===================== Skills ===================== */
-.skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap:12px; margin-top:12px; }
-.skill-item { background: rgba(255,255,255,0.03); border-radius:10px; padding:12px; text-align:center; backdrop-filter: blur(6px); transition: transform .2s, box-shadow .2s; }
-.skill-item:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.55); }
-.skill-item i { font-size:1.8rem; color:var(--main-color); margin-bottom:8px; display:block; }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.skill-item {
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: transform .2s, box-shadow .2s;
+  font-family: "Nunito", sans-serif;
+}
+.skill-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.55);
+}
+.skill-item i {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin-bottom: 8px;
+  display: block;
+}
 
 /* ===================== Education ===================== */
-.education-container { display:flex; flex-direction:column; gap:12px; margin-top:8px; }
-.education-card { padding:12px; border-left:4px solid var(--main-color); background: rgba(0,0,0,0.22); border-radius:8px; }
-.education-card h3 { color:var(--main-color); margin-bottom:6px; font-weight:600; }
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+.education-card {
+  padding: 12px;
+  border-left: 4px solid var(--main-color);
+  background: rgba(0,0,0,0.22);
+  border-radius: 8px;
+}
+.education-card h3 {
+  color: var(--main-color);
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-family: "Fjalla One", "Nunito", sans-serif;
+}
 
-/* ===================== Contact form ===================== */
-/* ===================== Contact Form - Large ===================== */
-form { 
-  max-width:1000px;  /* زودنا الحجم */
-  margin:0 auto; 
-  padding:24px;      /* padding داخلي أكبر */
-  background: rgba(255,255,255,0.05); /* subtle glass effect */
-  border-radius:16px;
+/* ===================== Contact Form ===================== */
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
   backdrop-filter: blur(8px);
 }
-
-.form-row { 
-  display:flex; 
-  gap:16px;  /* مسافة أكبر بين الحقول */
-  margin-bottom:16px; 
-  flex-wrap:wrap; /* لتكون responsive */
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
-
-.form-row input, textarea { 
-  flex:1; 
-  padding:16px; /* أكبر padding */
-  border-radius:12px; 
-  border:1px solid rgba(255,255,255,0.08); 
-  background: rgba(255,255,255,0.03); 
-  color:#fff; 
-  font-family:'Poppins', sans-serif; 
-  font-size:1rem; /* أكبر حجم نص */
+.form-row input, textarea {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
   transition: all .3s ease;
 }
-
 .form-row input:focus, textarea:focus {
-  outline:none;
+  outline: none;
   border-color: var(--main-color);
   box-shadow: 0 0 10px rgba(30,144,255,0.4);
   background: rgba(255,255,255,0.05);
 }
-
-textarea { min-height:120px; } /* مساحة أكبر للنص */
-
-.form-actions { 
-  text-align:right; 
-  margin-top:16px; 
+textarea { min-height: 120px; }
+.form-actions {
+  text-align: right;
+  margin-top: 16px;
 }
-
-.form-actions button { 
-  padding:12px 24px; 
-  font-size:1rem; 
-  border-radius:8px; 
-  border:none; 
-  background: var(--main-color); 
-  color:#fff; 
-  cursor:pointer; 
+.form-actions button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
   transition: all .3s ease;
 }
-
-.form-actions button:hover { 
-  background: #0f75d1; 
-  box-shadow: 0 6px 20px rgba(30,144,255,0.4); 
+.form-actions button:hover {
+  background: #0f75d1;
+  box-shadow: 0 6px 20px rgba(30,144,255,0.4);
   transform: translateY(-2px);
 }
 
-
 /* ===================== Links ===================== */
-a { color:var(--main-color); text-decoration:none; font-family:'Poppins', sans-serif; }
-a.plain-link { color:#ddd; text-decoration:none; }
-a:hover { color:#fff; }
+a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+a.plain-link { color: #ddd; text-decoration: none; }
+a:hover { color: #fff; }
 
 /* ===================== Footer ===================== */
-.note, footer { font-family:'Poppins', sans-serif; }
-.note { margin-top:18px; font-size:0.95rem; color:#ddd; text-align:center; }
-footer { text-align:center; padding:18px; color:#aaa; margin-top:14px; }
+.note, footer {
+  font-family: "Nunito", sans-serif;
+}
+.note {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: #ddd;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 18px;
+  color: #aaa;
+  margin-top: 14px;
+}
 
 /* ===================== Fade-up animation ===================== */
-.fade-up { will-change: transform, opacity; opacity:0; transform: translateY(30px) scale(.995); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1); }
-.fade-up.visible { opacity:1; transform: translateY(0) scale(1); }
+.fade-up {
+  will-change: transform, opacity;
+  opacity: 0;
+  transform: translateY(30px) scale(.995);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.2,1);
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
 
 /* ===================== Responsive ===================== */
 @media (max-width:900px){
-  .form-row { flex-direction:column; }
-  header nav { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:8px; }
-  .project-card { width:100%; max-width:520px; }
-  .service-card { width:100%; max-width:320px; }
+  .form-row { flex-direction: column; }
+  header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 8px; }
+  .project-card { width: 100%; max-width: 520px; }
+  .service-card { width: 100%; max-width: 320px; }
 }
