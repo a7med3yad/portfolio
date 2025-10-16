@@ -11,27 +11,21 @@
   <!-- Font Awesome & DevIcons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Fjalla+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Fjalla+One&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    /* إزالة الـ underline من الروابط */
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; }
   </style>
 </head>
 
 <body>
-  <!-- Background Video -->
   <video autoplay muted loop playsinline id="bg-video">
     <source src="video/v2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 
-  <!-- Header -->
   <header>
     <h1>Ahmed Ayad</h1>
     <p class="subtitle">Software Engineer • Backend & Cloud (ASP.NET Core, Flask)</p>
@@ -46,7 +40,8 @@
   </header>
 
   <main class="container">
-    <!-- About -->
+    <!-- كل الأقسام كما هي عندك -->
+     <!-- About -->
     <section id="about" class="card fade-up">
       <h2>About Me</h2>
       <p>
@@ -235,9 +230,7 @@
 
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
   <script>
-    // Fade-up animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -246,24 +239,7 @@
         }
       });
     }, { threshold: 0.15 });
-
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Contact Form
-    const EMAILJS_USER_ID = '';
-    const SERVICE_ID = '';
-    const TEMPLATE_ID = '';
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      formStatus.textContent = 'Opening mail client...';
-      window.location.href = `mailto:ahmed.ibrahim01974@gmail.com?subject=${encodeURIComponent('Portfolio Contact from ' + name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' <' + email + '>')}`;
-    });
   </script>
 </body>
 </html>
